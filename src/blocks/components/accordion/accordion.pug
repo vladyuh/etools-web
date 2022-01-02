@@ -1,0 +1,11 @@
+mixin accordion(clas,data)
+  .accordion(class=""+(clas ? clas : '')+"")
+    .accordion-items
+      each item,index in data
+        .accordion-items_item
+          .accordion-items_top
+             .accordion-items_title= item.title
+             .accordion-items_arrow
+              +icons('#ic_expand', 24)
+          .accordion-items_content
+            p= item.answer           

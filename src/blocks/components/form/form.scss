@@ -1,0 +1,30 @@
+.input,
+.select,
+.textarea {
+    display: flex;
+    flex-direction: column;
+    input,
+    textarea {
+        outline: none;
+    }
+}
+
+.input,
+.select {
+    &-icon__wrap {
+        position: relative;
+        .icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 8px;
+            display: flex;
+            align-items: center;
+        }
+        input,
+        select {
+            width: 100%;
+            padding: 10px 10px 10px 34px;
+        }
+    }
+}

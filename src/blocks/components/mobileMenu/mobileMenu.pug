@@ -1,0 +1,13 @@
+include ../../components/burger/burger
+mixin mobileMenu(data)
+  .mobileMenu
+    .container
+      .mobileMenu-header
+        .mobileMenu-header__toggle
+          +burger('opened')
+      .mobileMenu-nav
+        ul.mobileMenu-nav__ul
+          each item in data
+            li
+              a(href=item.link)=item.title
+      .mobileMenu-footer

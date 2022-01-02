@@ -1,0 +1,56 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+@import "vendor/libs";
+@import "base/fonts";
+@import "base/general";
+@import "../blocks/components/components";
+@import "../blocks/modules/modules";
+
+section.sections {
+    padding: 30px 0;
+}
+
+.sections {
+    .section-h1 {
+        margin-bottom: 25px;
+    }
+
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+
+        .image {
+            position: relative;
+            padding-top: 360px / 640px * 100%;
+
+            img {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        .desc {
+            font-size: 14px;
+            line-height: 150%;
+        }
+
+        .goto {
+            margin-top: auto;
+            font-weight: 600;
+            padding-top: 14px;
+
+            a {
+                color: #448aff;
+            }
+        }
+    }
+}

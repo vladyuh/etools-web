@@ -1,0 +1,58 @@
+include ../../../views/helpers/mixins.pug
+//- input
+mixin input(type, placeholder,label,required)
+  .input(class="input-"+(type ? type : '')+"")
+    if label 
+      span.label=label
+    if required
+      input(type=type, placeholder=placeholder, required="true")
+    else
+      input(type=type, placeholder=placeholder)
+//- input with icon
+mixin input-icon(type, placeholder,label,required,icon)
+  .input(class="input-"+(type ? type : '')+" input-icon")
+    if label 
+      span.label=label
+    .input-icon__wrap
+      span.icon: +icons(icon,'24')
+      if required
+        input(type=type, placeholder=placeholder, required="true")
+      else
+        input(type=type, placeholder=placeholder)
+//- textarea
+mixin textarea(placeholder,label,required)
+  .textarea
+    if label 
+      span.label=label
+    if required
+      textarea(placeholder=placeholder, required="true")
+    else
+      textarea(placeholder=placeholder)
+//- select
+mixin select(placeholder, label, data)
+  .select
+    if label 
+      span.label=label
+    select
+      each item, index in data
+        if(index == 0)
+          option(value=index,selected,disabled)= item
+        else
+          option(value=index)= item
+//- select-icon
+mixin select-icon(placeholder, label, data,icon)
+  .select.select-icon
+    if label 
+      span.label=label
+    .select-icon__wrap
+      span.icon: +icons(icon,'12')
+      select
+        each item, index in data
+          if(index == 0)
+            option(value=index,selected,disabled)= item
+          else
+            option(value=index)= item
+//- submit button
+mixin submit(value)
+  .input.input-submit
+    input(type="submit", value=value)

@@ -1,0 +1,14 @@
+include ../../components/burger/burger
+mixin header(data)
+  .container
+    .header
+      .header-burger
+        +burger
+      .header-logo
+        .header-logo__img
+          //img(data-src="none",class="lazyload", width="126", height="49", loading="lazy", alt="")
+      .header-nav
+        ul.header-nav__ul
+          each item in data
+            li: a(href=item.link)=item.title
+      .header-feedback
