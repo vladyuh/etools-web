@@ -4,13 +4,16 @@ header {
     position: sticky;
     top: 0;
     z-index: 3;
-    background: $white;
+    background: #fff;
 }
 
 .header {
     display: flex;
     align-items: center;
     padding: 10px 0;
+
+    &-burger{
+    }
 
     &-logo {
         max-width: 126px;
@@ -43,6 +46,10 @@ header {
 
             li {
                 margin: 0 10px;
+                
+                a{
+                    
+                }
             }
         }
 

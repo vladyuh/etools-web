@@ -13,17 +13,34 @@ section.sections {
 
 .sections {
     .section-h1 {
-        margin-bottom: 25px;
+        margin-bottom: 40px;
+        
+    }
+
+    .swiper{
+        overflow: visible;
+    }
+
+    &-pagination{
+        position: relative;
+        padding-top: 36px;
+
+        .swiper-pagination{
+            position: static;
+        }
     }
 
     .swiper-slide {
         display: flex;
         flex-direction: column;
         height: auto;
+        overflow: hidden;
+        box-shadow: 4px 20px 47px 0 rgba(0,0,0,0.1);
 
         .image {
             position: relative;
             padding-top: 360px / 640px * 100%;
+            background: #fff;
 
             img {
                 position: absolute;
@@ -38,18 +55,29 @@ section.sections {
             }
         }
 
-        .desc {
-            font-size: 14px;
-            line-height: 150%;
+        .title{            
+            padding: 0 32px;
         }
 
-        .goto {
-            margin-top: auto;
+        .desc {
+            font-size: 14px;
+            line-height: 150%;            
+            padding: 0 32px;
+        }
+
+        .goto {           
             font-weight: 600;
-            padding-top: 14px;
+            padding: 16px 32px 27px;
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+
+            svg{
+                margin-left: 10px;
+            }
 
             a {
-                color: #448aff;
+                color: #8ab4f8;
             }
         }
     }

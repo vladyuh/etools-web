@@ -1,9 +1,3 @@
-import "./import/modules";
-import "./import/components";
-
-//libraries
-import $, { each } from "jquery";
-import Inputmask from "inputmask";
 import { mobileInit } from "../blocks/components/mobileMenu/mobileMenu";
 
  // import Swiper bundle with all modules installed
@@ -13,10 +7,6 @@ import { mobileInit } from "../blocks/components/mobileMenu/mobileMenu";
     lazy: true,
     slidesPerView: 1,
     spaceBetween: 50,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
     breakpoints: {
         320: {
           slidesPerView: 1,
@@ -46,12 +36,6 @@ window.addEventListener("resize", function() {
 
 //Mobile menu init
 mobileInit();
-
-//Phone input mask init
-if (document.querySelector("input[type=tel]")) {
-    const IMaskPhone = new Inputmask("+375 (99) 999-99-99")
-    IMaskPhone.mask(document.querySelector("input[type=tel]"))
-}
 
 //Browser-level image lazy-loading
 if ('loading' in HTMLImageElement.prototype) {

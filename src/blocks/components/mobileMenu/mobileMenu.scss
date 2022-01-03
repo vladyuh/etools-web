@@ -6,7 +6,7 @@
     bottom: 0;
     transform: translateX(-100%);
     width: 300px;
-    background: #eee;
+    background: #fff;
     transition: transform 0.3s ease;
     overflow-y: scroll;
     z-index: 1001;
@@ -28,6 +28,10 @@
             font-size: 18px;
             line-height: 120%;
             margin-bottom: 15px;
+
+            a{
+                
+            }
         }
     }
 }
