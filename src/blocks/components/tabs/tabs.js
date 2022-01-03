@@ -2,21 +2,11 @@ import $ from "jquery";
 
 export function initTabs(parent, elem, content) {
 
-    $(elem).on("click", function() {
-        $(this)
-            .parents(parent)
-            .find(elem)
-            .removeClass("is-active");
-        $(this).parents(parent).find(content).hide();
+    $(elem).on("click", function () {
+        $(elem).removeClass("is-active");
         $(this).addClass("is-active");
-        $(this)
-            .parents(parent)
-            .find(content)
-            .eq($(this).index())
-            .show();
+        $(content).removeClass('is-active');
+        $(content).eq($(this).index()).addClass('is-active');
     });
-
-    $(content).hide();
-    $(content).eq(0).show();
 
 }

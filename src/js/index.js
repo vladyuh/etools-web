@@ -1,4 +1,5 @@
 import { mobileInit } from "../blocks/components/mobileMenu/mobileMenu";
+import { initTabs } from "../blocks/components/tabs/tabs";
 
  // import Swiper bundle with all modules installed
  import Swiper from "swiper/swiper-bundle";
@@ -36,6 +37,8 @@ window.addEventListener("resize", function() {
 
 //Mobile menu init
 mobileInit();
+
+initTabs('section.tabs','section.tabs .toggle', 'section.tabs .content');
 
 //Browser-level image lazy-loading
 if ('loading' in HTMLImageElement.prototype) {

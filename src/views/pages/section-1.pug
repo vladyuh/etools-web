@@ -1,0 +1,158 @@
+include ../helpers/mixins
+include ../../blocks/components/breadcrumbs/breadcrumbs.pug
+include ../../blocks/components/form/form.pug
+include ../../blocks/components/accordion/accordion.pug
+include ../../blocks/components/headers/headers.pug
+include ../../blocks/components/pagination/pagination.pug
+include ../../blocks/components/mobileMenu/mobileMenu.pug
+include ../../blocks/modules/header/header.pug
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        title Раздел 1
+        meta(name="theme-color" content="#fff")
+        meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+        meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+        link(rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon")
+        link(rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png")
+        link(rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png")
+        link(rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png")
+        link(rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png")
+        link(rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png")
+        link(rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png")
+        link(rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png")
+        link(rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png")
+        link(rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png")
+        link(rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png")
+        link(rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png")
+        link(rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png")
+        link(rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png")
+        link(rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png")
+        link(rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png")
+        link(rel="stylesheet" href="styles/main.css")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet")
+    body.perf-no-animation.page
+        header
+            block header
+            +header([
+                {
+                    link: "/",
+                    title: 'Вход',
+                },
+                {
+                    link: "/",
+                    title: 'Регистрация',
+                },
+            ])            
+        +mobileMenu([
+            {
+                link: "/",
+                title: 'Разделы',
+            },
+            ])
+        main
+            section.tabs
+                .container
+                    .tabs__toggles
+                        .toggle.is-active Тема 1
+                        .toggle Тема 2
+                        .toggle Тема 3
+                        .toggle Тема 4
+                        .toggle Тема 5
+                    .tabs__content
+                        .content.edit-content.is-active
+                            h2 Современные компьютерные устройства
+                            p Одним из самых распространенных устройств для работы с данными является компьютер. Компьютер может получать данные от человека или другого устройства, хранить и обрабатывать данные, передавать их человеку или другому устройству
+                            p <strong>Компьютер</strong> — универсальное устройство для работы с данными.
+                            p Сегодня компьютеры используются практически в любой сфере деятельности людей. <strong>(пример 1)</strong>
+                            br
+                            table.no-borders
+                                tbody
+                                    tr
+                                        th(colspan=2, style="text-align: center"): h3 Пример 1
+                                    tr                            
+                                        th(style="width: 50%"): img(src="../../img/sections/image001.jpg", alt="")
+                                        th(style="width: 50%"): img(src="../../img/sections/image003.jpg", alt="")
+                            br
+                            p Они являются незаменимыми помощниками человека в науке, инженерных расчетах, производстве станков и автомобилей. С помощью компьютеров создают анимационные фильмы и музыкальные произведения. Компьютеры находят применение в быту и в сфере услуг.
+                            p Компьютеры хранят данные о книгах в библиотеке и о лекарствах в аптеке. Литературные и музыкальные произведения, театральные постановки и концерты любимых артистов можно хранить на компьютере в электронном виде.
+                            p Кроме компьютеров, с данными могут работать и другие устройства. К ним можно отнести смартфоны, навигаторы, банкоматы, инфокиоски, цифровые фотоаппараты, видеокамеры и др. <strong>(пример 2)</strong>. Все эти устройства позволяют пользователю ввести данные, обработать запрос, вывести результат, сохранить или передать информацию.
+                            table.no-borders
+                                tbody
+                                    tr
+                                        th(colspan=2, style="text-align: center"): h3 Пример 2
+                                    tr                            
+                                        th(style="width: 50%"): img(src="../../img/sections/image005.jpg", alt="")
+                                        th(style="width: 50%"): img(src="../../img/sections/image007.jpg", alt="")
+                        .content.edit-content
+                            h2 Устройства компьютера
+                            p Одним из самых распространенных устройств для работы с данными является компьютер. Компьютер может получать данные от человека или другого устройства, хранить и обрабатывать данные, передавать их человеку или другому устройству
+                            p <strong>Компьютер</strong> — универсальное устройство для работы с данными.
+                            p Сегодня компьютеры используются практически в любой сфере деятельности людей. <strong>(пример 1)</strong>
+                            br
+                            table.no-borders
+                                tbody
+                                    tr
+                                        th(colspan=2, style="text-align: center"): h3 Пример 1
+                                    tr                            
+                                        th(style="width: 50%"): img(src="../../img/sections/image001.jpg", alt="")
+                                        th(style="width: 50%"): img(src="../../img/sections/image003.jpg", alt="")
+                            br
+                            p Они являются незаменимыми помощниками человека в науке, инженерных расчетах, производстве станков и автомобилей. С помощью компьютеров создают анимационные фильмы и музыкальные произведения. Компьютеры находят применение в быту и в сфере услуг.
+                            p Компьютеры хранят данные о книгах в библиотеке и о лекарствах в аптеке. Литературные и музыкальные произведения, театральные постановки и концерты любимых артистов можно хранить на компьютере в электронном виде.
+                            p Кроме компьютеров, с данными могут работать и другие устройства. К ним можно отнести смартфоны, навигаторы, банкоматы, инфокиоски, цифровые фотоаппараты, видеокамеры и др. <strong>(пример 2)</strong>. Все эти устройства позволяют пользователю ввести данные, обработать запрос, вывести результат, сохранить или передать информацию.
+                        .content.edit-content
+                            h2 Работа с клавиатурой и мышью
+                            p Одним из самых распространенных устройств для работы с данными является компьютер. Компьютер может получать данные от человека или другого устройства, хранить и обрабатывать данные, передавать их человеку или другому устройству
+                            p <strong>Компьютер</strong> — универсальное устройство для работы с данными.
+                            p Сегодня компьютеры используются практически в любой сфере деятельности людей. <strong>(пример 1)</strong>
+                            br
+                            table.no-borders
+                                tbody
+                                    tr
+                                        th(colspan=2, style="text-align: center"): h3 Пример 1
+                                    tr                            
+                                        th(style="width: 50%"): img(src="../../img/sections/image001.jpg", alt="")
+                                        th(style="width: 50%"): img(src="../../img/sections/image003.jpg", alt="")
+                            br
+                            p Они являются незаменимыми помощниками человека в науке, инженерных расчетах, производстве станков и автомобилей. С помощью компьютеров создают анимационные фильмы и музыкальные произведения. Компьютеры находят применение в быту и в сфере услуг.
+                            p Компьютеры хранят данные о книгах в библиотеке и о лекарствах в аптеке. Литературные и музыкальные произведения, театральные постановки и концерты любимых артистов можно хранить на компьютере в электронном виде.
+                        .content.edit-content
+                            h2 Представление информации в компьютере
+                            p Одним из самых распространенных устройств для работы с данными является компьютер. Компьютер может получать данные от человека или другого устройства, хранить и обрабатывать данные, передавать их человеку или другому устройству
+                            p <strong>Компьютер</strong> — универсальное устройство для работы с данными.
+                            p Сегодня компьютеры используются практически в любой сфере деятельности людей. <strong>(пример 1)</strong>
+                            br
+                            table.no-borders
+                                tbody
+                                    tr
+                                        th(colspan=2, style="text-align: center"): h3 Пример 1
+                                    tr                            
+                                        th(style="width: 50%"): img(src="../../img/sections/image001.jpg", alt="")
+                                        th(style="width: 50%"): img(src="../../img/sections/image003.jpg", alt="")
+                            br
+                            p Они являются незаменимыми помощниками человека в науке, инженерных расчетах, производстве станков и автомобилей. С помощью компьютеров создают анимационные фильмы и музыкальные произведения. Компьютеры находят применение в быту и в сфере услуг.
+                        .content.edit-content
+                            h2 Правила работы за компьютером
+                            p Одним из самых распространенных устройств для работы с данными является компьютер. Компьютер может получать данные от человека или другого устройства, хранить и обрабатывать данные, передавать их человеку или другому устройству
+                            p <strong>Компьютер</strong> — универсальное устройство для работы с данными.
+                            p Сегодня компьютеры используются практически в любой сфере деятельности людей. <strong>(пример 1)</strong>
+                            br
+                            table.no-borders
+                                tbody
+                                    tr
+                                        th(colspan=2, style="text-align: center"): h3 Пример 1
+                                    tr                            
+                                        th(style="width: 50%"): img(src="../../img/sections/image001.jpg", alt="")
+                                        th(style="width: 50%"): img(src="../../img/sections/image003.jpg", alt="")
+                            br
+        footer
+            include ../../blocks/modules/footer/footer.pug
+        block scripts
+            script(src="js/main.js")
+            script(src="js/vendor.js")

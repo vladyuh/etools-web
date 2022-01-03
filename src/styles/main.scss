@@ -14,18 +14,18 @@ section.sections {
 .sections {
     .section-h1 {
         margin-bottom: 40px;
-        
+
     }
 
-    .swiper{
+    .swiper {
         overflow: visible;
     }
 
-    &-pagination{
+    &-pagination {
         position: relative;
         padding-top: 36px;
 
-        .swiper-pagination{
+        .swiper-pagination {
             position: static;
         }
     }
@@ -35,7 +35,7 @@ section.sections {
         flex-direction: column;
         height: auto;
         overflow: hidden;
-        box-shadow: 4px 20px 47px 0 rgba(0,0,0,0.1);
+        box-shadow: 4px 20px 47px 0 rgba(0, 0, 0, 0.1);
 
         .image {
             position: relative;
@@ -55,24 +55,24 @@ section.sections {
             }
         }
 
-        .title{            
+        .title {
             padding: 0 32px;
         }
 
         .desc {
             font-size: 14px;
-            line-height: 150%;            
+            line-height: 150%;
             padding: 0 32px;
         }
 
-        .goto {           
+        .goto {
             font-weight: 600;
             padding: 16px 32px 27px;
             margin-top: auto;
             display: flex;
             align-items: center;
 
-            svg{
+            svg {
                 margin-left: 10px;
             }
 
@@ -80,5 +80,56 @@ section.sections {
                 color: #8ab4f8;
             }
         }
+    }
+}
+
+section {
+
+    .tabs {
+        &__toggles {
+            padding: 10px 0;
+            display: flex;
+            overflow-x: auto;
+            background: #fff;
+
+            .toggle {
+                cursor: pointer;
+                position: relative;
+                font-weight: 600;
+                padding: 10px 15px;
+                flex-shrink: 0;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 0;
+                    height: 2px;
+                    background: #8ab4f8;
+                    transition: all 0.25s ease;
+                }
+
+                &.is-active::after {
+                    width: 80%;
+                }
+            }
+        }
+
+        &__content {
+            padding: 25px 0;
+            max-width: 1000px;
+            margin: 0 auto;
+
+            .content {
+                display: none;
+
+                &.is-active {
+                    display: block;
+                }
+            }
+        }
+
     }
 }

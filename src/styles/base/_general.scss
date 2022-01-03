@@ -131,3 +131,127 @@ main {
         padding: 0 20px;
     }
 }
+
+.edit-content p {
+    font-size: 14px;
+    line-height: 160%;
+}
+
+.edit-content a {
+    color: #84cdff;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 180%
+}
+
+.edit-content bold {
+    font-weight: 700 !important
+}
+
+.edit-content ol {
+    list-style: none;
+    padding: 0;
+    counter-reset: item
+}
+
+.edit-content ol li {
+    padding-left: 23px;
+    position: relative;
+    counter-increment: item;
+    font-size: 15px;
+    line-height: 180%;
+    color: #455762
+}
+
+.edit-content ol li p {
+    margin: 5px 0
+}
+
+.edit-content ol li::before {
+    content: counter(item, decimal-leading-zero) ".";
+    position: absolute;
+    top: .15em;
+    left: 0;
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 180%;
+    color: #8488e8
+}
+
+.edit-content ul {
+    padding: 17px 0
+}
+
+.edit-content ul li {
+    padding-left: 23px;
+    position: relative;
+    font-size: 15px;
+    line-height: 180%;
+    color: #455762
+}
+
+.edit-content ul li::before {
+    content: "";
+    position: absolute;
+    top: .7em;
+    left: 0;
+    display: block;
+    width: 7px;
+    height: 7px;
+    background: #8488e8;
+    border-radius: 50%
+}
+
+.edit-content .table {
+    overflow-x: auto;
+    margin: 35px 0 0
+}
+
+.edit-content table {
+    width: 100%;
+    border-collapse: collapse
+}
+
+.edit-content table.no-borders {
+    border-collapse: separate;
+
+    th,
+    tr {
+        padding: 0;
+        border: none;
+    }
+}
+
+.edit-content table tr.head {
+    background: #eef0fc;
+    font-size: 14px;
+    line-height: 180%
+}
+
+.edit-content table tr.head th {
+    color: #455762;
+    padding: 13px 20px
+}
+
+.edit-content table tr th {
+    padding: 18px 20px;
+    border: 1px solid #b5b5b5;
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 400
+}
+
+.edit-content table th img {
+    width: 100%;
+}
+
+.edit-content table tr th:first-child {
+    text-align: left
+}
+
+.edit-content table tr p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 150%
+}
