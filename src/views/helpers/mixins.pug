@@ -1,10 +1,10 @@
 mixin icons(id, size)
   if size
     svg(width=''+size+'' height=''+size+'')
-      use(xlink:href="/img/sprites/sprite.svg"+id)
+      use(xlink:href="./img/sprites/sprite.svg"+id)
   else
     svg(width="25" height="25")
-      use(xlink:href="/img/sprites/sprite.svg"+id)
+      use(xlink:href="./img/sprites/sprite.svg"+id)
 
 mixin listUl(list)
   ul
