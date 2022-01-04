@@ -10,6 +10,7 @@
     transition: transform 0.3s ease;
     overflow-y: scroll;
     z-index: 1001;
+    border-radius: 0 16px 16px 0;
 
     &.opened {
         transform: translateX(0);

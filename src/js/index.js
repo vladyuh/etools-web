@@ -53,3 +53,12 @@ if ('loading' in HTMLImageElement.prototype) {
     document.body.appendChild(script);
     console.log('lazysizes load');
 }
+
+window.addEventListener('scroll', function(){
+  var header = document.querySelectorAll("header")[0];
+  if (window.pageYOffset > 0) {
+      header.classList.add("sticky");
+  } else {
+      header.classList.remove("sticky");
+  }
+});

@@ -1,17 +1,22 @@
 header {
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 3;
     background: #fff;
+    transition: all 0.5s ease;
+    height: 69px;
+
+    &.sticky {
+        background: #F2F6FC;
+    }
 }
 
 .header {
     display: flex;
     align-items: center;
     padding: 10px 0;
-
-    &-burger {}
 
     &-logo {
         max-width: 126px;
