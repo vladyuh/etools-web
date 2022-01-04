@@ -1,17 +1,16 @@
 include ../../components/burger/burger
 mixin mobileMenu(data, isActive)
   .mobileMenu
-    .container
-      .mobileMenu-header
-        .mobileMenu-header__toggle
-          +burger('opened')
-      .mobileMenu-nav
-        ul.mobileMenu-nav__ul
-          each item in data
-            if(item.isActive == true)
-              li.is-active
-                a(href=item.link)=item.title
-            else
-              li
-                a(href=item.link)=item.title
-      .mobileMenu-footer
+    .mobileMenu-header
+      .mobileMenu-header__toggle
+        +burger('opened')
+    .mobileMenu-nav
+      ul.mobileMenu-nav__ul
+        each item in data
+          if(item.isActive == true)
+            li
+              a(href=item.link, class="is-active")=item.title
+          else
+            li
+              a(href=item.link)=item.title
+    .mobileMenu-footer

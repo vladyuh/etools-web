@@ -28,6 +28,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
     <link rel="stylesheet" href="styles/main.min.css">
+    <link rel="stylesheet" href="styles/index.min.css">
   </head>
   <body class="perf-no-animation page">
     <header>
@@ -42,15 +43,10 @@
               </svg>
             </button>
           </div>
-          <div class="header-logo">
-            <div class="header-logo__img">
-              <!--img(data-src="none",class="lazyload", width="126", height="49", loading="lazy", alt="")-->
-            </div>
-          </div>
+          <div class="header-logo"></div>
           <div class="header-nav">
             <ul class="header-nav__ul">
               <li><a href="/">Вход</a></li>
-              <li><a href="/">Регистрация</a></li>
             </ul>
           </div>
           <div class="header-feedback"></div>
@@ -58,134 +54,110 @@
       </div>
     </header>
     <div class="mobileMenu">
-      <div class="container">
-        <div class="mobileMenu-header">
-          <div class="mobileMenu-header__toggle">
-            <button class="burger opened">
-              <svg viewbox="0 0 100 100">
-                <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"></path>
-                <path class="line line2" d="M 20,50 H 80"></path>
-                <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"></path>
-              </svg>
-            </button>
-          </div>
+      <div class="mobileMenu-header">
+        <div class="mobileMenu-header__toggle">
+          <button class="burger opened">
+            <svg viewbox="0 0 100 100">
+              <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"></path>
+              <path class="line line2" d="M 20,50 H 80"></path>
+              <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"></path>
+            </svg>
+          </button>
         </div>
-        <div class="mobileMenu-nav">
-          <ul class="mobileMenu-nav__ul">
-            <li><a href="/">Вход</a></li>
-            <li><a href="/">Регистрация</a></li>
-          </ul>
-        </div>
-        <div class="mobileMenu-footer"></div>
       </div>
+      <div class="mobileMenu-nav">
+        <ul class="mobileMenu-nav__ul">
+          <li><a href="/">Вход</a></li>
+        </ul>
+      </div>
+      <div class="mobileMenu-footer"></div>
     </div>
     <main>
       <section class="sections">
         <div class="container">
           <h1 class="section-h1">Разделы</h1>
           <div class="swiper sections-items">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide sections-items__item">
+            <div class="swiper-wrapper"><a class="swiper-slide sections-items__item" href="/section.html">
                 <div class="image"><img class="swiper-lazy" src="https://cdn.thewirecutter.com/wp-content/media/2021/03/allinonecomputers-2048px-00116-2x1-1.jpg?auto=webp&amp;quality=75&amp;crop=2:1&amp;width=1024" alt=""></div>
                 <div class="title section-h3">1. Знакомство с компьютером</div>
                 <div class="desc">Что такое компьютер? Как работает и где применяется? Устройства, входящие в состав компьютера. Единицы измерения информации.</div>
-                <div class="goto"><a href="/section-1.html">Перейти</a>
+                <div class="goto"><span>Перейти</span>
                   <svg width="24" height="24">
                     <use xlink:href="./img/sprites/sprite.svg#ic_go"></use>
                   </svg>
-                </div>
-              </div>
-              <div class="swiper-slide sections-items__item">
+                </div></a><a class="swiper-slide sections-items__item" href="/">
                 <div class="image"><img class="swiper-lazy" src="https://miro.medium.com/max/640/1*FgK4FrKAZgmlAoY-ZHXraw.jpeg" alt=""></div>
                 <div class="title section-h3">2. Операционные системы</div>
                 <div class="desc">Что такое операционная система и как она управляет ПК ? Краткий обзор операционных систем. Структрура окна Windows. Справочная система Windows.</div>
-                <div class="goto"><a href="/">Перейти</a>
+                <div class="goto"><span>Перейти</span>
                   <svg width="24" height="24">
                     <use xlink:href="./img/sprites/sprite.svg#ic_go"></use>
                   </svg>
-                </div>
-              </div>
-              <div class="swiper-slide sections-items__item">
+                </div></a><a class="swiper-slide sections-items__item" href="/">
                 <div class="image"><img class="swiper-lazy" src="https://images.idgesg.net/images/article/2018/05/card_catalog_filing_cabinet_data_repository_library_archive_index_sashkinw_gettyimages_1200x800-100757562-large.jpg" alt=""></div>
                 <div class="title section-h3">3. Архивация данных</div>
                 <div class="desc">Окна программы WinRAR. Создание архива. Расширение возможности создания архива. Извлечение из архива</div>
-                <div class="goto"><a href="/">Перейти</a>
+                <div class="goto"><span>Перейти</span>
                   <svg width="24" height="24">
                     <use xlink:href="./img/sprites/sprite.svg#ic_go"></use>
                   </svg>
-                </div>
-              </div>
-              <div class="swiper-slide sections-items__item">
+                </div></a><a class="swiper-slide sections-items__item" href="/">
                 <div class="image"><img class="swiper-lazy" src="https://i.guim.co.uk/img/media/3db080bdf2d816336ca04505d90d2b683df7321f/0_207_4782_2869/master/4782.jpg?width=445&amp;quality=45&amp;auto=format&amp;fit=max&amp;dpr=2&amp;s=ab8f4626c0ae185b53d0a74b13bc9ad0" alt=""></div>
                 <div class="title section-h3">4. Вирусы и антивирусы</div>
                 <div class="desc">Что такое компьютерный вирус? Как определить, что компьютер заражен вирусом? Антивирусные программы. Как удалить вирус.</div>
-                <div class="goto"><a href="/">Перейти</a>
+                <div class="goto"><span>Перейти</span>
                   <svg width="24" height="24">
                     <use xlink:href="./img/sprites/sprite.svg#ic_go"></use>
                   </svg>
-                </div>
-              </div>
-              <div class="swiper-slide sections-items__item">
+                </div></a><a class="swiper-slide sections-items__item" href="/">
                 <div class="image"><img class="swiper-lazy" src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4qsko?ver=f011&amp;q=90&amp;h=675&amp;w=830&amp;b=%23FFFFFFFF&amp;aim=true" alt=""></div>
                 <div class="title section-h3">5. Знакомство с Microsoft Word</div>
                 <div class="desc">Что такое Microsoft Word? Обзор окна программы. Создание, открытие и сохранение документов. Редактирование и работа с текстом. Вставка рисунков, фигур. Создание и оформление таблиц.</div>
-                <div class="goto"><a href="/">Перейти</a>
+                <div class="goto"><span>Перейти</span>
                   <svg width="24" height="24">
                     <use xlink:href="./img/sprites/sprite.svg#ic_go"></use>
                   </svg>
-                </div>
-              </div>
-              <div class="swiper-slide sections-items__item">
+                </div></a><a class="swiper-slide sections-items__item" href="/">
                 <div class="image"><img class="swiper-lazy" src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4xdQw?ver=2885&amp;q=90&amp;h=675&amp;w=830&amp;b=%23FFFFFFFF&amp;aim=true" alt=""></div>
                 <div class="title section-h3">6. Работа в Microsoft Excel</div>
                 <div class="desc">Что такое Microsoft Excel? Обзор окна, структура таблицы. Создание, открытие и сохранение документов. Ввод, форматирование и фильтрация данных.</div>
-                <div class="goto"><a href="/">Перейти</a>
+                <div class="goto"><span>Перейти</span>
                   <svg width="24" height="24">
                     <use xlink:href="./img/sprites/sprite.svg#ic_go"></use>
                   </svg>
-                </div>
-              </div>
-              <div class="swiper-slide sections-items__item">
+                </div></a><a class="swiper-slide sections-items__item" href="/">
                 <div class="image"><img class="swiper-lazy" src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2tZpb?ver=cb63&amp;q=90&amp;h=675&amp;w=830&amp;b=%23FFFFFFFF&amp;aim=true" alt=""></div>
                 <div class="title section-h3">7. Знакомство с Microsoft Access</div>
                 <div class="desc">Что такое Microsoft Access? Обзор окна, структура программы. Создание, открытие и сохранение баз данных. Ввод, форматирование и поиск данных.</div>
-                <div class="goto"><a href="/">Перейти</a>
+                <div class="goto"><span>Перейти</span>
                   <svg width="24" height="24">
                     <use xlink:href="./img/sprites/sprite.svg#ic_go"></use>
                   </svg>
-                </div>
-              </div>
-              <div class="swiper-slide sections-items__item">
+                </div></a><a class="swiper-slide sections-items__item" href="/">
                 <div class="image"><img class="swiper-lazy" src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4Cdki?ver=507c&amp;q=90&amp;h=675&amp;w=830&amp;b=%23FFFFFFFF&amp;aim=true" alt=""></div>
                 <div class="title section-h3">8. Работа в Microsoft PowerPoint</div>
                 <div class="desc">Что такое PowerPoint? Использование конструктора и шаблонов. Оформление слайдов. Настройка анимации. Демонстрация презентации</div>
-                <div class="goto"><a href="/">Перейти</a>
+                <div class="goto"><span>Перейти</span>
                   <svg width="24" height="24">
                     <use xlink:href="./img/sprites/sprite.svg#ic_go"></use>
                   </svg>
-                </div>
-              </div>
-              <div class="swiper-slide sections-items__item">
+                </div></a><a class="swiper-slide sections-items__item" href="/">
                 <div class="image"><img class="swiper-lazy" src="https://cdn.britannica.com/s:900x675,c:crop/88/129488-131-09AB5E83/Internet-blue-screen-blog-society-history-media-2009.jpg" alt=""></div>
                 <div class="title section-h3"> 9. Глобальная сеть Internet</div>
                 <div class="desc">Что такое Internet и зачем он нужен? Основы работы с браузером. Посковые порталы. Internet- магазины, услуги, банкинг. IP-телефония. Дистанционное обучение.</div>
-                <div class="goto"><a href="/">Перейти</a>
+                <div class="goto"><span>Перейти</span>
                   <svg width="24" height="24">
                     <use xlink:href="./img/sprites/sprite.svg#ic_go"></use>
                   </svg>
-                </div>
-              </div>
-              <div class="swiper-slide sections-items__item">
+                </div></a><a class="swiper-slide sections-items__item" href="/">
                 <div class="image"><img class="swiper-lazy" src="https://miro.medium.com/max/3760/1*oMaAhnmepsPqjhAgBASIEw.jpeg" alt=""></div>
                 <div class="title section-h3">10. Облачные технологии</div>
                 <div class="desc">Как работает электронная почта? Создание, отправка и прием писем. Ответ и пересылка сообщение. Что такое Gmail и Google Drive. Особенности сервисов Gmail и Drive.</div>
-                <div class="goto"><a href="/">Перейти</a>
+                <div class="goto"><span>Перейти</span>
                   <svg width="24" height="24">
                     <use xlink:href="./img/sprites/sprite.svg#ic_go"></use>
                   </svg>
-                </div>
-              </div>
-            </div>
+                </div></a></div>
           </div>
           <div class="sections-pagination"> 
             <div class="swiper-pagination"></div>

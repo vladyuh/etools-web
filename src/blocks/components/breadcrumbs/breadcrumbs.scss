@@ -1,5 +1,6 @@
 .breadcrumb {
     background-color: transparent;
+
     & ul {
         display: flex;
         align-items: center;
@@ -7,18 +8,22 @@
         overflow-x: auto;
         white-space: nowrap;
     }
+
     & li {
         & a {
             &:hover {
                 text-decoration: underline;
             }
         }
+
         &::after {
             content: ' - ';
             display: inline-block;
+            margin: 0 5px;
             border-radius: 50%;
             position: relative;
         }
+
         &:last-child::after {
             display: none;
         }

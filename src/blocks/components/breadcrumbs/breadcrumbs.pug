@@ -3,6 +3,6 @@ mixin breadcrumb(data, modify, active)
     ul
       each item, index in data
         if index === 0
-          li: a(href="/" class=(active == index ? 'active':''))!= item
+          li: a(href=item.link class=(active == index ? 'active':''))!= item.text
         else
-          li: a(href="#" class=(active == index ? 'active':''))!= item
+          li: a(href=item.link class=(active == index ? 'active':''))!= item.text

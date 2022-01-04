@@ -6,7 +6,6 @@ header {
     z-index: 3;
     background: #fff;
     transition: all 0.5s ease;
-    height: 69px;
 
     &.sticky {
         background: #F2F6FC;
@@ -17,28 +16,11 @@ header {
     display: flex;
     align-items: center;
     padding: 10px 0;
+    height: 69px;
 
     &-logo {
         max-width: 126px;
         width: 100%;
-
-        &__img {
-            padding-top: 49px / 126px * 100%;
-            position: relative;
-
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                width: 100%;
-            }
-        }
-
-        @media screen and (max-width: $w1024) {
-            margin-left: auto;
-        }
     }
 
     &-nav {
@@ -55,10 +37,6 @@ header {
                     font-weight: 600;
                 }
             }
-        }
-
-        @media screen and (max-width:$w1024) {
-            display: none;
         }
     }
 }

@@ -8,9 +8,10 @@
     width: 300px;
     background: #fff;
     transition: transform 0.3s ease;
-    overflow-y: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
     z-index: 1001;
-    border-radius: 0 16px 16px 0;
+    padding: 0 20px;
 
     &.opened {
         transform: translateX(0);
@@ -26,31 +27,30 @@
 
     &-nav {
         &__ul li {
-            display: flex;
-            align-items: center;
-            font-size: 16px;
-            padding: 8px 16px;
-            border-radius: 14px;
-            min-height: 48px;
-            margin-bottom: 6px;
-            font-weight: 600;
-            
-            &:hover{
-                background: #E3E3E3;
-            }
-            
+            a {
+                color: #1f1f1f;
+                display: flex;
+                align-items: center;
+                font-size: 16px;
+                padding: 8px 16px;
+                border-radius: 14px;
+                min-height: 48px;
+                margin-bottom: 6px;
+                font-weight: 600;
 
-            &.is-active{
-                background: #C2E7FF;
-                
-
-                &:hover{
-                    background: #7FCFFF;
+                &:hover {
+                    background: #E3E3E3;
                 }
-            }
 
-            a{
-                color: #1f1f1f;                
+
+                &.is-active {
+                    background: #C2E7FF;
+
+
+                    &:hover {
+                        background: #7FCFFF;
+                    }
+                }
             }
         }
     }

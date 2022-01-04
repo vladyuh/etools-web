@@ -28,6 +28,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
     <link rel="stylesheet" href="styles/main.min.css">
+    <link rel="stylesheet" href="styles/detail.min.css">
   </head>
   <body class="perf-no-animation page">
     <header>
@@ -42,15 +43,10 @@
               </svg>
             </button>
           </div>
-          <div class="header-logo">
-            <div class="header-logo__img">
-              <!--img(data-src="none",class="lazyload", width="126", height="49", loading="lazy", alt="")-->
-            </div>
-          </div>
+          <div class="header-logo"></div>
           <div class="header-nav">
             <ul class="header-nav__ul">
               <li><a href="/">Вход</a></li>
-              <li><a href="/">Регистрация</a></li>
             </ul>
           </div>
           <div class="header-feedback"></div>
@@ -58,35 +54,23 @@
       </div>
     </header>
     <div class="mobileMenu">
-      <div class="container">
-        <div class="mobileMenu-header">
-          <div class="mobileMenu-header__toggle">
-            <button class="burger opened">
-              <svg viewbox="0 0 100 100">
-                <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"></path>
-                <path class="line line2" d="M 20,50 H 80"></path>
-                <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"></path>
-              </svg>
-            </button>
-          </div>
+      <div class="mobileMenu-header">
+        <div class="mobileMenu-header__toggle">
+          <button class="burger opened">
+            <svg viewbox="0 0 100 100">
+              <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"></path>
+              <path class="line line2" d="M 20,50 H 80"></path>
+              <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"></path>
+            </svg>
+          </button>
         </div>
-        <div class="mobileMenu-nav">
-          <ul class="mobileMenu-nav__ul">
-            <li><a href="/">Разделы</a></li>
-            <li class="is-active"><a href="/section-1.html">Знакомство с компьютером</a></li>
-            <li><a href="/section-1.html">Операционные системы</a></li>
-            <li><a href="/section-1.html">Архивация данных</a></li>
-            <li><a href="/section-1.html">Вирусы и антивирусы</a></li>
-            <li><a href="/section-1.html">Знакомство с Microsoft Word</a></li>
-            <li><a href="/section-1.html">Работа в Microsoft Excel</a></li>
-            <li><a href="/section-1.html">Знакомство с Microsoft Access</a></li>
-            <li><a href="/section-1.html">Работа в Microsoft PowerPoint</a></li>
-            <li><a href="/section-1.html">Глобальная сеть Internet</a></li>
-            <li><a href="/section-1.html">Облачные технологии</a></li>
-          </ul>
-        </div>
-        <div class="mobileMenu-footer"></div>
       </div>
+      <div class="mobileMenu-nav">
+        <ul class="mobileMenu-nav__ul">
+          <li><a href="/">Вход</a></li>
+        </ul>
+      </div>
+      <div class="mobileMenu-footer"></div>
     </div>
     <main>
       <div class="pageTitle">
@@ -94,6 +78,13 @@
           <div class="pageTitle__wrp">
             <div class="pageTitle__image" style="background-image: url(https://cdn.thewirecutter.com/wp-content/media/2021/03/allinonecomputers-2048px-00116-2x1-1.jpg?auto=webp&amp;quality=75&amp;crop=2:1&amp;width=1024)"></div>
             <h1 class="section-h1 pageTitle__text">Знакомство с компьютером</h1>
+            <div class="breadcrumb">
+              <ul>
+                <li><a href="index.html">Разделы</a></li>
+                <li><a href="section.html">Знакомство с компьютером</a></li>
+                <li><a href="topic.html">Темы</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

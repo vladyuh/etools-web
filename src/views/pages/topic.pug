@@ -37,6 +37,7 @@ html(lang="ru")
         link(rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png")
         link(rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png")
         link(rel="stylesheet" href="styles/main.css")
+        link(rel="stylesheet" href="styles/detail.css")
     body.perf-no-animation.page
         header
             block header
@@ -45,56 +46,11 @@ html(lang="ru")
                     link: "/",
                     title: 'Вход',
                 },
-                {
-                    link: "/",
-                    title: 'Регистрация',
-                },
             ])            
         +mobileMenu([
             {
                 link: "/",
-                title: 'Разделы',
-            },
-            {
-                link: "/section-1.html",
-                title: 'Знакомство с компьютером',
-                isActive: true,
-            },
-            {
-                link: "/section-1.html",
-                title: 'Операционные системы',
-            },
-            {
-                link: "/section-1.html",
-                title: 'Архивация данных',
-            },
-            {
-                link: "/section-1.html",
-                title: 'Вирусы и антивирусы',
-            },
-            {
-                link: "/section-1.html",
-                title: 'Знакомство с Microsoft Word',
-            },
-            {
-                link: "/section-1.html",
-                title: 'Работа в Microsoft Excel',
-            },
-            {
-                link: "/section-1.html",
-                title: 'Знакомство с Microsoft Access',
-            },
-            {
-                link: "/section-1.html",
-                title: 'Работа в Microsoft PowerPoint',
-            },
-            {
-                link: "/section-1.html",
-                title: 'Глобальная сеть Internet',
-            },
-            {
-                link: "/section-1.html",
-                title: 'Облачные технологии',
+                title: 'Вход',
             },
             ])
         main
@@ -105,6 +61,20 @@ html(lang="ru")
                             style="background-image: url(https://cdn.thewirecutter.com/wp-content/media/2021/03/allinonecomputers-2048px-00116-2x1-1.jpg?auto=webp&quality=75&crop=2:1&width=1024)"
                         )
                         h1.section-h1.pageTitle__text Знакомство с компьютером
+                        +breadcrumb([
+                            {
+                                link: "index.html",
+                                text: "Разделы",
+                            },
+                            {
+                                link: "section.html",
+                                text: "Знакомство с компьютером",
+                            },
+                            {
+                                link: "topic.html",
+                                text: "Темы",
+                            },
+                        ])
             section.tabs
                 .container
                     .tabs__toggles
