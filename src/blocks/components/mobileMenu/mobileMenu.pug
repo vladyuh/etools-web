@@ -1,5 +1,5 @@
 include ../../components/burger/burger
-mixin mobileMenu(data)
+mixin mobileMenu(data, isActive)
   .mobileMenu
     .container
       .mobileMenu-header
@@ -8,6 +8,10 @@ mixin mobileMenu(data)
       .mobileMenu-nav
         ul.mobileMenu-nav__ul
           each item in data
-            li
-              a(href=item.link)=item.title
+            if(item.isActive == true)
+              li.is-active
+                a(href=item.link)=item.title
+            else
+              li
+                a(href=item.link)=item.title
       .mobileMenu-footer

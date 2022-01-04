@@ -26,12 +26,31 @@
 
     &-nav {
         &__ul li {
-            font-size: 18px;
-            line-height: 120%;
-            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            padding: 8px 16px;
+            border-radius: 14px;
+            min-height: 48px;
+            margin-bottom: 6px;
+            font-weight: 600;
+            
+            &:hover{
+                background: #E3E3E3;
+            }
+            
+
+            &.is-active{
+                background: #C2E7FF;
+                
+
+                &:hover{
+                    background: #7FCFFF;
+                }
+            }
 
             a{
-                
+                color: #1f1f1f;                
             }
         }
     }

@@ -2,9 +2,9 @@ import { mobileInit } from "../blocks/components/mobileMenu/mobileMenu";
 import { initTabs } from "../blocks/components/tabs/tabs";
 
  // import Swiper bundle with all modules installed
- import Swiper from "swiper/swiper-bundle";
+/*  import Swiper from "swiper/swiper-bundle"; */
 
- const swiper = new Swiper('.swiper', {
+ /* const swiper = new Swiper('.swiper', {
     lazy: true,
     slidesPerView: 1,
     spaceBetween: 50,
@@ -19,7 +19,7 @@ import { initTabs } from "../blocks/components/tabs/tabs";
           slidesPerView: 3,
         },
       },
-  });
+  }); */
 
 //Remove animations on load
 window.onload = function() {
@@ -62,3 +62,11 @@ window.addEventListener('scroll', function(){
       header.classList.remove("sticky");
   }
 });
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js')
+    .then(() => navigator.serviceWorker.ready.then((worker) => {
+      worker.sync.register('syncdata');
+    }))
+    .catch((err) => console.log(err));
+}

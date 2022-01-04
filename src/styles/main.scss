@@ -14,11 +14,14 @@ section.sections {
 .sections {
     .section-h1 {
         margin-bottom: 40px;
+        text-align: center;
 
     }
 
     .swiper {
         overflow: visible;
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
     &-pagination {
@@ -30,12 +33,24 @@ section.sections {
         }
     }
 
+    .swiper-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
     .swiper-slide {
         display: flex;
         flex-direction: column;
         height: auto;
         overflow: hidden;
-        max-width: 447px;
+        max-width: 100%;
+        width: calc(50% - 12px);
+        margin-bottom: 24px;
+
+        @media screen and (max-width: 767px){
+            width: 100%;
+        }
 
         &:hover{
             .image{
