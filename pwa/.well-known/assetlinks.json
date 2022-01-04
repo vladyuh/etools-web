@@ -1,0 +1,6 @@
+[{
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target" : { "namespace": "android_app", "package_name": "app.web.etoools.twa",
+                     "sha256_cert_fingerprints": ["05:33:30:BE:86:78:89:22:EF:70:EF:36:E1:65:BF:64:A0:CD:C4:38:2A:AF:90:B7:28:D2:2B:53:67:F8:F0:8C"] }
+      }
+]
