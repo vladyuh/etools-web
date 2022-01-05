@@ -1,0 +1,155 @@
+include ../helpers/mixins
+include ../../blocks/components/breadcrumbs/breadcrumbs.pug
+include ../../blocks/components/form/form.pug
+include ../../blocks/components/accordion/accordion.pug
+include ../../blocks/components/headers/headers.pug
+include ../../blocks/components/pagination/pagination.pug
+include ../../blocks/components/mobileMenu/mobileMenu.pug
+include ../../blocks/modules/header/header.pug
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        title Раздел 1
+        meta(name="theme-color" content="#fff")
+        link(rel="manifest" href="manifest.json")
+        meta(name="mobile-web-app-capable" content="yes")
+        meta(name="apple-mobile-web-app-capable" content="yes")
+        meta(name="msapplication-starturl" content="/")
+        meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+        meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+        link(rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon")
+        link(rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png")
+        link(rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png")
+        link(rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png")
+        link(rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png")
+        link(rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png")
+        link(rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png")
+        link(rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png")
+        link(rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png")
+        link(rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png")
+        link(rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png")
+        link(rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png")
+        link(rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png")
+        link(rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png")
+        link(rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png")
+        link(rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png")
+        link(rel="stylesheet" href="styles/main.css")
+        link(rel="stylesheet" href="styles/detail.css")
+    body.perf-no-animation.page
+        header
+            block header
+            +header([
+                {
+                    link: "/",
+                    title: 'Вход',
+                },
+            ])            
+        +mobileMenu([
+            {
+                link: "/",
+                title: 'Вход',
+            },
+            ])
+        main
+            .pageTitle
+                .container
+                    .pageTitle__wrp
+                        .pageTitle__image(
+                            style="background-image: url(https://cdn.thewirecutter.com/wp-content/media/2021/03/allinonecomputers-2048px-00116-2x1-1.jpg?auto=webp&quality=75&crop=2:1&width=1024)"
+                        )
+                        h1.section-h1.pageTitle__text Знакомство с компьютером
+                        +breadcrumb([
+                            {
+                                link: "index.html",
+                                text: "Разделы",
+                            },
+                            {
+                                link: "section.html",
+                                text: "Знакомство с компьютером",
+                            },
+                            {
+                                link: "test.html",
+                                text: "Тест",
+                            },
+                        ])
+            section.test
+                .container
+                    .test__title#test__title
+                        h2.section-h2 Контрольный тест
+                        .test__start.btn
+                            span Начать
+                            +icons('#ic_start', 24)
+                    form.test__form(action="test.html", id="formTest")
+                        .test__formItem
+                         .test__formQuestion.section-h3 1. Вопрос 1
+                         .test__formAnswers
+                            .test__formRadio                                
+                                label Да
+                                    input(type="radio", disabled, name="answer1")                              
+                            .test__formRadio                                
+                                label Нет
+                                    input(type="radio", disabled, name="answer1")
+                            .test__formRadio
+                                label Не знаю
+                                    input(type="radio", disabled, name="answer1")
+                        .test__formItem
+                         .test__formQuestion.section-h3 2. Вопрос 2
+                         .test__formAnswers
+                            .test__formRadio                                
+                                label Да
+                                    input(type="radio", disabled, name="answer2")                             
+                            .test__formRadio
+                                label Нет
+                                    input(type="radio", disabled, name="answer2")
+                            .test__formRadio
+                                label Не знаю
+                                    input(type="radio", disabled, name="answer2")
+                        .test__formItem
+                         .test__formQuestion.section-h3 3. Вопрос 3
+                         .test__formAnswers
+                            .test__formRadio                                
+                                label Да
+                                    input(type="checkbox", disabled, name="answer3")                              
+                            .test__formRadio
+                                label Нет
+                                    input(type="checkbox", disabled, name="answer3")
+                            .test__formRadio
+                                label Не знаю
+                                    input(type="checkbox", disabled, name="answer3")
+                        .test__formItem
+                         .test__formQuestion.section-h3 4. Вопрос 4
+                         .test__formAnswers
+                            .test__formRadio                                
+                                label Да
+                                    input(type="checkbox", disabled, name="answer4")                                
+                            .test__formRadio
+                                label Нет
+                                    input(type="checkbox", disabled, name="answer4")
+                            .test__formRadio
+                                label Не знаю
+                                    input(type="checkbox", disabled, name="answer4")
+                        .test__formItem
+                         .test__formQuestion.section-h3 5. Вопрос 5
+                         .test__formAnswers
+                            .test__formRadio
+                                label Да
+                                    input(type="radio", disabled, name="answer5")                              
+                            .test__formRadio
+                                label Нет
+                                    input(type="radio", disabled, name="answer5")
+                            .test__formRadio
+                                label Не знаю
+                                    input(type="radio", disabled, name="answer5")
+                        .test__formSubmit
+                            input(type="hidden", name="time", id="time")
+                            .btn.hidden
+                                span Окончить
+                                +icons('#ic_send',24) 
+        footer
+            include ../../blocks/modules/footer/footer.pug
+        block scripts
+            script(src="js/main.js")
+            script(src="js/vendor.js")

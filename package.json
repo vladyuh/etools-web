@@ -74,8 +74,7 @@
     "dependencies": {
         "inputmask": "^5.0.6",
         "jquery": "^3.6.0",
-        "smart-grid": "^2.1.2",
-        "swiper": "^7.4.1"
+        "smart-grid": "^2.1.2"
     },
     "husky": {
         "hooks": {

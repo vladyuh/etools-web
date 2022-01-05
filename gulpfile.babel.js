@@ -53,6 +53,19 @@ const requireDir = require("require-dir"),
             dist: "./dist/fonts/",
             watch: "./src/fonts/**/*.{woff,woff2}"
         },
+        pwa: {
+            src: [
+                "./pwa/*.*",
+                "./pwa/**/*.*",
+                "./pwa/**/**/*.*",
+            ],
+            dist: "./dist/",
+            watch: [
+                "./pwa/*.*",
+                "./pwa/**/*.*",
+                "./pwa/**/**/*.*",                
+            ]
+        },
         favicons: {
             src: "./src/img/favicon/*.{jpg,jpeg,png,gif,tiff}",
             dist: "./dist/img/favicons/",
@@ -68,10 +81,10 @@ requireDir("./gulp-tasks/");
 export { paths };
 
 export const development = gulp.series("clean", "smart-grid",
-    gulp.parallel(["views", "styles", "scripts", "images", "webp", "sprites", "fonts", "favicons"]),
+    gulp.parallel(["views", "styles", "scripts", "images", "webp", "sprites", "fonts", "favicons", "pwa"]),
     gulp.parallel("serve"));
 
 export const prod = gulp.series("clean",
-    gulp.parallel(["views", "styles", "scripts", "images", "webp", "sprites", "fonts", "favicons", "gzip"]));
+    gulp.parallel(["views", "styles", "scripts", "images", "webp", "sprites", "fonts", "favicons", "gzip", "pwa"]));
 
 export default development;

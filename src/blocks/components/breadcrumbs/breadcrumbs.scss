@@ -7,6 +7,12 @@
         list-style-type: none;
         overflow-x: auto;
         white-space: nowrap;
+
+        @media screen and (max-width: 480px) {
+            flex-wrap: wrap;
+            overflow-x: hidden;
+            justify-content: center;            
+        }
     }
 
     & li {

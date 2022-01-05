@@ -10,6 +10,11 @@ header {
     &.sticky {
         background: #F2F6FC;
     }
+
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
 }
 
 .header {
@@ -38,5 +43,21 @@ header {
                 }
             }
         }
+    }
+}
+
+.btn {
+    background: #0B57D0;
+    border-radius: 22px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 22px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+
+    svg{
+        margin-left: 10px;
     }
 }
