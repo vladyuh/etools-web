@@ -4,17 +4,32 @@
   height: 40px;
   display: flex;
   align-items: center;
+  flex-grow: 0;
   padding: 0 22px;
   color: #fff;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.25s ease;
 
-  &:hover{
-      background: #0842A0;
+  &:hover {
+    background: #0842A0;
   }
 
-  svg{
-      margin-left: 10px;
+  svg {
+    margin-left: 10px;
+  }
+
+  &-file,
+  &-submit {
+    span {
+      white-space: nowrap;
+      text-overflow: clip;
+      overflow: hidden;
+      flex-grow: 0;
+    }
+
+    input {
+      display: none;
+    }
   }
 }

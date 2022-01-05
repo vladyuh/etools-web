@@ -25,6 +25,12 @@ mobileInit();
 /* Init tabs */
 initTabs('section.tabs', 'section.tabs .toggle', 'section.tabs .content');
 
+var location = window.location.href;
+var anchor = location.split('#');
+
+$('section.tabs .toggle[data-toggle="'+anchor[1]+'"]').addClass('is-active');
+$('section.tabs .content[data-content="'+anchor[1]+'"]').addClass('is-active');
+
 //Browser-level image lazy-loading
 if ('loading' in HTMLImageElement.prototype) 
 {
@@ -62,45 +68,33 @@ if ('serviceWorker' in navigator) {
 }
 
 /* Timer for tests */
-var interval;
-var timer2 = "30:00";
 $('.test__start.btn').on('click', function () {
   $(this).addClass('disabled');  
   $('.test__formAnswers input').removeAttr('disabled');
   $('.test__formSubmit .btn').removeClass('hidden');
 
-  /* interval = setInterval(function () {
-    var timer = timer2.split(':');
-    var minutes = parseInt(timer[0], 10);
-    var seconds = parseInt(timer[1], 10);
-    --seconds;
-    minutes = (seconds < 0) ? --minutes : minutes;
-    if (minutes < 0){
-      minutes = 0;
-      seconds = 0;
-      clearInterval(interval);
-      if(confirm("Время ответа вышло")){
-        $('.test__form').submit();
-      }
-    } 
-    seconds = (seconds < 0) ? 59 : seconds;
-    seconds = (seconds < 10) ? '0' + seconds : seconds;
-    $('.test__start.btn span').text(minutes + ':' + seconds);
-    timer2 = minutes + ':' + seconds;
-  }, 1000); */
+  var headerHeight = $('header').height() + 20;
 
   $('html,body').animate({
-    scrollTop: $("#test__title").offset().top - ($('header').height() + 20)
+    scrollTop: $("#test__title").offset().top - headerHeight
   });
 
 });
 
 /* Submit test form */
 $('.test__formSubmit .btn').on('click', function () {
-  /* clearInterval(interval);
-  var time = $('.test__start.btn span').text();
-  var times = time.split(':');
-  var timee = ((30 - times[0])+":"+(60 - times[1]));
-  $('input#time').val(timee); */
   $(this).parents('.test__form').submit();
 });
+
+$('form.exercise__item .btn input[type="file"]').on('change', function(){
+  var files = this.files;
+  console.log(files);
+  if(files.length != 0){
+    var file = this.files[0].name;
+    $(this).parents('.btn').find('span').text(file);
+    $(this).parents('form').submit(); 
+  }
+  else{
+    $(this).parents('.btn').find('span').text('Файл не выбран'); 
+  }   
+})

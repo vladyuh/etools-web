@@ -88,65 +88,65 @@ html(lang="ru")
                          .test__formAnswers
                             .test__formRadio                                
                                 label Del
-                                    input(type="radio", disabled, name="answer1")                              
+                                    input(type="radio", required, disabled, name="answer1")                              
                             .test__formRadio                                
                                 label Backspace
-                                    input(type="radio", disabled, name="answer1")
+                                    input(type="radio", required, disabled, name="answer1")
                             .test__formRadio
                                 label Insert
-                                    input(type="radio", disabled, name="answer1")
+                                    input(type="radio", required, disabled, name="answer1")
                         .test__formItem
                          .test__formQuestion.section-h3 2. Для чего предназначен процессор?
                          .test__formAnswers
                             .test__formRadio                                
                                 label Для охлаждения материнской платы
-                                    input(type="radio", disabled, name="answer2")                             
+                                    input(type="radio", required, disabled, name="answer2")                             
                             .test__formRadio
                                 label Для передачи информации
-                                    input(type="radio", disabled, name="answer2")
+                                    input(type="radio", required, disabled, name="answer2")
                             .test__formRadio
                                 label Для обработки информации
-                                    input(type="radio", disabled, name="answer2")
+                                    input(type="radio", required, disabled, name="answer2")
                         .test__formItem
                          .test__formQuestion.section-h3 3. Укажите устройства внешней памяти?
                          .test__formAnswers
                             .test__formRadio                                
-                                label Оптический диск, оперативная память, флеш-памятьДа
-                                    input(type="checkbox", disabled, name="answer3")                              
+                                label Оптический диск, оперативная память, флеш-память
+                                    input(type="radio", required, disabled, name="answer3")                              
                             .test__formRadio
                                 label Жесткий диск, флеш-память, оптический диск
-                                    input(type="checkbox", disabled, name="answer3")
+                                    input(type="radio", required, disabled, name="answer3")
                             .test__formRadio
                                 label Оперативная память, жесткий диск, оптический диск
-                                    input(type="checkbox", disabled, name="answer3")
+                                    input(type="radio", required, disabled, name="answer3")
                         .test__formItem
                          .test__formQuestion.section-h3 4. Какие конструкции компьютера вам известны?
                          .test__formAnswers
                             .test__formRadio                                
                                 label Прикладной и настольный компьютер
-                                    input(type="checkbox", disabled, name="answer4")                                
+                                    input(type="radio", required, disabled, name="answer4")                                
                             .test__formRadio
                                 label Настольный и мобильный компьютер
-                                    input(type="checkbox", disabled, name="answer4")
+                                    input(type="radio", required, disabled, name="answer4")
                             .test__formRadio
                                 label Прикладной и мобильный компьютер
-                                    input(type="checkbox", disabled, name="answer4")
+                                    input(type="radio", required, disabled, name="answer4")
                         .test__formItem
                          .test__formQuestion.section-h3 5. Как вызвать контекстное меню при работе с мышкой?
                          .test__formAnswers
                             .test__formRadio
                                 label Дважды быстро нажать и отпустить левую кнопку мыши
-                                    input(type="radio", disabled, name="answer5")                              
+                                    input(type="radio", required, disabled, name="answer5")                              
                             .test__formRadio
                                 label Щелкнуть один раз правой кнопкой мыши
-                                    input(type="radio", disabled, name="answer5")
+                                    input(type="radio", required, disabled, name="answer5")
                             .test__formRadio
                                 label Нажать и удерживать нажатой левую кнопку
-                                    input(type="radio", disabled, name="answer5")
+                                    input(type="radio", required, disabled, name="answer5")
                         .test__formSubmit
-                            input(type="hidden", name="time", id="time")
-                            .btn.hidden
+                            label.btn.btn-submit.hidden
                                 span Окончить
+                                input(type="submit", name="submit")
                                 +icons('#ic_send',24) 
         footer
             include ../../blocks/modules/footer/footer.pug

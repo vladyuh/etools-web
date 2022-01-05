@@ -110,7 +110,7 @@ section {
                 flex-direction: column;
                 transition: background 0.5s ease;
 
-                &:hover{
+                &:hover {
                     background: #C2E7FF;
                 }
             }
@@ -147,17 +147,17 @@ section {
 
     }
 
-    &.test{
+    &.test {
         padding: 64px 0;
-        
-        .section-h2 {            
-            font-weight: 600;            
+
+        .section-h2 {
+            font-weight: 600;
         }
-        
+
     }
 
-    .test{
-        &__title{
+    .test {
+        &__title {
             padding: 0 32px;
             margin-bottom: 25px;
             display: flex;
@@ -165,95 +165,159 @@ section {
             justify-content: space-between;
             flex-wrap: wrap;
 
-            @media screen and (max-width: 535px){
-                .section-h2{
+            @media screen and (max-width: 535px) {
+                .section-h2 {
                     width: 100%;
                 }
-            } 
+            }
 
         }
 
-        &__start{
+        &__start {
             width: 130px;
 
-            svg{
+            svg {
                 margin-left: auto;
             }
-            
-            &.disabled{
+
+            &.disabled {
                 pointer-events: none;
                 background: #041E49;
             }
-            @media screen and (max-width: 535px){
+
+            @media screen and (max-width: 535px) {
                 margin-top: 25px;
-            }            
+            }
         }
 
-        &__form{
-        }
+        &__form {}
 
-        &__formItem{
+        &__formItem {
             padding: 32px;
             background: #F2F6FC;
             border-radius: 16px;
             margin-bottom: 24px;
             display: flex;
             flex-direction: column;
-            transition: background 0.5s ease; 
+            transition: background 0.5s ease;
+
+            &:hover {
+                background: #C2E7FF;
+            }
+
         }
 
-        &__formQuestion{
+        &__formQuestion {
             font-size: 18px;
             color: #0b57d0;
             font-weight: bold;
             margin: 0;
         }
 
-        &__formAnswers{            
+        &__formAnswers {
             margin-top: 10px;
         }
 
-        &__formRadio, &__formCheck{
+        &__formRadio {
             margin: 10px 0;
             display: flex;
             align-items: center;
 
-            label{
+            label {
                 color: #1F1F1F;
-                font-weight: bold;
+                font-weight: 600;
                 display: flex;
                 flex-direction: row-reverse;
                 align-items: center;
                 cursor: pointer;
 
-                input{
+                input {
                     margin-right: 10px;
                 }
             }
         }
 
-        &__formSubmit{
+        &__formSubmit {
             padding: 0 32px;
             display: flex;
             justify-content: flex-end;
 
-            .hidden{
+            .hidden {
                 display: none;
             }
 
             @media screen and (max-width: 535px) {
                 justify-content: center;
-                
+
             }
         }
     }
 
-    &.exercise{
-        padding: 64px 0;
-        
-        .section-h2 {            
-            font-weight: 600;            
+    &.exercise {
+        padding: 64px 0 40px;
+
+        .section-h2 {
+            font-weight: 600;
         }
-        
+
+    }
+
+    .exercise {
+        &__items {
+            margin-top: 25px;
+        }
+
+        &__item {
+            padding: 32px;
+            background: #F2F6FC;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            transition: background 0.5s ease;
+            width: 100%;
+            margin-bottom: 24px;
+
+            &:hover {
+                background: #C2E7FF;
+            }
+
+            .title {
+                font-size: 18px;
+                color: #0b57d0;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+
+            .desc {
+                color: #1F1F1F;
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+
+            .btns {
+                display: flex;
+
+                .btn {
+                    margin-right: 10px;
+                    width: 150px;
+
+                    svg {
+                        margin-left: auto;
+                    }
+
+                }
+
+                @media screen and (max-width: 425px) {
+                    flex-wrap: wrap;
+                    width: 100%;
+
+                    .btn {
+                        width: 100%;
+                        margin-right: 0;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
     }
 }

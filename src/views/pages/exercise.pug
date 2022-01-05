@@ -78,6 +78,63 @@ html(lang="ru")
             section.exercise
                 .container
                     h2.section-h2 Задания
+                    .exercise__items
+                        form(action="exercise.html").exercise__item
+                            .title 1. Устройства компьютера
+                            .desc Подпишите устройства компьютера, используя слова для справки
+                            .btns
+                                a.download.btn(href="exercises/exercise-1.docx" download)
+                                    span Скачать
+                                    +icons('#ic_download', 24)
+                                label.btn.btn-file
+                                    span Загрузить
+                                    +icons('#ic_upload', 24)
+                                    input(type="file", name="file1")
+                        form(action="exercise.html").exercise__item
+                            .title 2. Функции устройств
+                            .desc Поставьте в соответствие устройствам компьютера, функции которые они выполняют
+                            .btns
+                                a.download.btn(href="exercises/exercise-2.docx" download)
+                                    span Скачать
+                                    +icons('#ic_download', 24)
+                                label.btn.btn-file
+                                    span Загрузить
+                                    +icons('#ic_upload', 24)
+                                    input(type="file", name="file2")
+                        form(action="exercise.html").exercise__item
+                            .title 3. Комплектующие системного блока
+                            .desc Поставьте в соответствие текстовым полям правильные ответы
+                            .btns
+                                a.download.btn(href="exercises/exercise-3.docx" download)
+                                    span Скачать
+                                    +icons('#ic_download', 24)
+                                label.btn.btn-file
+                                    span Загрузить
+                                    +icons('#ic_upload', 24)
+                                    input(type="file", name="file3")
+                        form(action="exercise.html").exercise__item
+                            .title 4. Функциональные клавиши клавиатуры
+                            .desc Напишите названия функциональных клавиш, выполняющих предлагаемые функции
+                            .btns
+                                a.download.btn(href="exercises/exercise-4.docx" download)
+                                    span Скачать
+                                    +icons('#ic_download', 24)
+                                label.btn.btn-file
+                                    span Загрузить
+                                    +icons('#ic_upload', 24)
+                                    input(type="file", name="file4")
+                        form(action="exercise.html").exercise__item
+                            .title 5. Единицы информации
+                            .desc Запишите правильные соотношения между единицами измерения информации
+                            .btns
+                                a.download.btn(href="exercises/exercise-5.docx" download)
+                                    span Скачать
+                                    +icons('#ic_download', 24)
+                                label.btn.btn-file
+                                    span Загрузить
+                                    +icons('#ic_upload', 24)
+                                    input(type="file", name="file5")
+
         footer
             include ../../blocks/modules/footer/footer.pug
         block scripts
