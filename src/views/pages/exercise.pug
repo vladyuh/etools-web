@@ -51,7 +51,7 @@ html(lang="ru")
             {
                 link: "/",
                 title: 'Вход',
-                },
+            },
             ])
         main
             .pageTitle
@@ -70,50 +70,14 @@ html(lang="ru")
                                 link: "section.html",
                                 text: "Знакомство с компьютером",
                             },
+                            {
+                                link: "test.html",
+                                text: "Задания",
+                            },
                         ])
-            section.detail
+            section.exercise
                 .container
-                    h2.section-h2 Темы
-                    .topics
-                        a(href="topic.html").topics__item
-                            .topics__title Современные компьютерные устройства
-                            .topics__link
-                                span Перейти
-                                +icons('#ic_go',24)
-                        a(href="topic.html").topics__item
-                            .topics__title Устройства компьютера
-                            .topics__link
-                                span Перейти
-                                +icons('#ic_go',24)
-                        a(href="topic.html").topics__item
-                            .topics__title Работа с клавиатурой и мышью
-                            .topics__link
-                                span Перейти
-                                +icons('#ic_go',24)
-                        a(href="topic.html").topics__item
-                            .topics__title Представление информации в компьютере
-                            .topics__link
-                                span Перейти
-                                +icons('#ic_go',24)
-                        a(href="topic.html").topics__item
-                            .topics__title Правила работы за компьютером
-                            .topics__link
-                                span Перейти
-                                +icons('#ic_go',24)
                     h2.section-h2 Задания
-                    .topics.exercises
-                        a(href="exercise.html").topics__item
-                            .topics__title Задания по теме "Знакомство с компьютером"
-                            .topics__link
-                                span Перейти
-                                +icons('#ic_go',24)
-                    h2.section-h2 Тесты
-                    .topics.tests
-                        a(href="test.html").topics__item
-                            .topics__title Контрольный тест по теме "Знакомство с компьютером"
-                            .topics__link
-                                span Перейти
-                                +icons('#ic_go',24)
         footer
             include ../../blocks/modules/footer/footer.pug
         block scripts

@@ -1,10 +1,12 @@
 include ../../components/burger/burger
-mixin header(data)
+mixin header(data, breadcrumbs)
   .container
     .header
       .header-burger
         +burger
       .header-logo
+        if breadcrumbs
+          +breadcrumb(breadcrumbs)
       .header-nav
         ul.header-nav__ul
           each item in data

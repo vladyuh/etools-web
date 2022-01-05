@@ -2,7 +2,8 @@ section {
 
     &.tabs,
     &.detail,
-    &.test {
+    &.test,
+    &.exercise {
         .container {
             max-width: 1024px;
         }
@@ -202,13 +203,14 @@ section {
         }
 
         &__formQuestion{
+            font-size: 18px;
             color: #0b57d0;
             font-weight: bold;
             margin: 0;
         }
 
         &__formAnswers{            
-            margin-top: 15px;
+            margin-top: 10px;
         }
 
         &__formRadio, &__formCheck{
@@ -244,5 +246,14 @@ section {
                 
             }
         }
+    }
+
+    &.exercise{
+        padding: 64px 0;
+        
+        .section-h2 {            
+            font-weight: 600;            
+        }
+        
     }
 }
