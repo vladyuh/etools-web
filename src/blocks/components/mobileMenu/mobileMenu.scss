@@ -1,17 +1,19 @@
 .mobileMenu {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     transform: translateX(-100%);
-    width: 300px;
+    width: 280px;
     background: #fff;
     transition: transform 0.3s ease;
     overflow-y: auto;
     overflow-x: hidden;
     z-index: 1001;
     padding: 0 20px;
+    padding-bottom: 25px;
 
     &.opened {
         transform: translateX(0);
@@ -26,6 +28,8 @@
     }
 
     &-nav {
+        flex-grow: 1;
+
         &__ul li {
             a {
                 color: #1f1f1f;
@@ -53,6 +57,10 @@
                 }
             }
         }
+    }
+
+    &-footer {
+        display: flex;
     }
 }
 
