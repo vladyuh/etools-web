@@ -93,18 +93,15 @@ $('form.exercise__item .btn input[type="file"]').on('change', function(){
     var file = this.files[0].name;
     console.log(files);
     $(this).parents('.btn').find('span').text(file);
-    $('.exercise__submit').addClass('is-active');
+    $(this).parents('form.exercise__item .btns').find('.btn-submit').css("display", "flex");
   }
   else{
     $(this).parents('.btn').find('span').text('Файл не выбран');
+    $(this).parents('form.exercise__item .btns').find('.btn-submit').hide();
   }
 })
 
-$('.exercise__submitConfirm').on('click', function(){
-  $('form.exercise__item').submit();
-  $(this).parents('.exercise__submit').removeClass('is-active');
-});
-
-$('.exercise__submitClose').on('click', function(){
-  $(this).parents('.exercise__submit').removeClass('is-active');
-});
+$('.mobileMenu-nav__ul > li > .dropdown').on('click',function(){
+  $(this).parents('.mobileMenu-nav__ul > li').toggleClass('is-active');
+  $(this).toggleClass('is-active');
+})

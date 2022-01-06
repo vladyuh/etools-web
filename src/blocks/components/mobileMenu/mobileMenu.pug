@@ -1,16 +1,24 @@
 include ../../components/burger/burger
-mixin mobileMenu(data, isActive)
+mixin mobileMenu()
   .mobileMenu
     .mobileMenu-header
       .mobileMenu-header__toggle
         +close()
     .mobileMenu-nav
       ul.mobileMenu-nav__ul
-        each item in data
-          if(item.isActive == true)
-            li
-              a(href=item.link, class="is-active")=item.title
-          else
-            li
-              a(href=item.link)=item.title
+        li: a(href="/") Вход
+        li
+          a(href="index.html") Разделы
+          .dropdown: +icons('#ic_dropdown', 24)
+          ul.submenu
+            li: a(href="section.html") Знакомство с компьютером
+            li: a(href="section.html") Операционные системы
+            li: a(href="section.html") Архивация данных
+            li: a(href="section.html") Вирусы и антивирусы
+            li: a(href="section.html") Знакомство с Microsoft Word
+            li: a(href="section.html") Работа в Microsoft Excel
+            li: a(href="section.html") Знакомство с Microsoft Access
+            li: a(href="section.html") Работа в Microsoft PowerPoint
+            li: a(href="section.html") Глобальная сеть Internet
+            li: a(href="section.html") Облачные технологии
     .mobileMenu-footer

@@ -47,12 +47,7 @@ html(lang="ru")
                     title: 'Вход',
                 },
             ])            
-        +mobileMenu([
-            {
-                link: "/",
-                title: 'Вход',
-            },
-            ])
+        +mobileMenu()
         main
             .pageTitle
                 .container
@@ -79,62 +74,82 @@ html(lang="ru")
                 .container
                     h2.section-h2 Задания
                     .exercise__items
-                        form(action="exercise.html", name="form-1").exercise__item
+                        form(action="exercise.html", id="form-1").exercise__item
                             .title 1. Устройства компьютера
                             .desc Подпишите устройства компьютера, используя слова для справки
                             .btns
                                 a.download.btn(href="exercises/exercise-1.docx" download)
-                                    span Скачать
-                                    +icons('#ic_download', 24)
+                                    span Открыть
+                                    +icons('#ic_launch', 24)
                                 label.btn.btn-file
                                     span Загрузить
                                     +icons('#ic_upload', 24)
                                     input(type="file", name="file1")
-                        form(action="exercise.html", name="form-2").exercise__item
+                                label.btn.btn-submit
+                                    span Отправить
+                                    +icons('#ic_send', 24)
+                                    input(type="submit")
+                        form(action="exercise.html", id="form-2").exercise__item
                             .title 2. Функции устройств
                             .desc Поставьте в соответствие устройствам компьютера, функции которые они выполняют
                             .btns
                                 a.download.btn(href="exercises/exercise-2.docx" download)
-                                    span Скачать
-                                    +icons('#ic_download', 24)
+                                    span Открыть
+                                    +icons('#ic_launch', 24)
                                 label.btn.btn-file
                                     span Загрузить
                                     +icons('#ic_upload', 24)
                                     input(type="file", name="file2")
-                        form(action="exercise.html", name="form-3").exercise__item
+                                label.btn.btn-submit
+                                    span Отправить
+                                    +icons('#ic_send', 24)
+                                    input(type="submit")
+                        form(action="exercise.html", id="form-3").exercise__item
                             .title 3. Комплектующие системного блока
                             .desc Поставьте в соответствие текстовым полям правильные ответы
                             .btns
                                 a.download.btn(href="exercises/exercise-3.docx" download)
-                                    span Скачать
-                                    +icons('#ic_download', 24)
+                                    span Открыть
+                                    +icons('#ic_launch', 24)
                                 label.btn.btn-file
                                     span Загрузить
                                     +icons('#ic_upload', 24)
                                     input(type="file", name="file3")
-                        form(action="exercise.html", name="form-4").exercise__item
+                                label.btn.btn-submit
+                                    span Отправить
+                                    +icons('#ic_send', 24)
+                                    input(type="submit")
+                        form(action="exercise.html", id="form-4").exercise__item
                             .title 4. Функциональные клавиши клавиатуры
                             .desc Напишите названия функциональных клавиш, выполняющих предлагаемые функции
                             .btns
                                 a.download.btn(href="exercises/exercise-4.docx" download)
-                                    span Скачать
-                                    +icons('#ic_download', 24)
+                                    span Открыть
+                                    +icons('#ic_launch', 24)
                                 label.btn.btn-file
                                     span Загрузить
                                     +icons('#ic_upload', 24)
                                     input(type="file", name="file4")
-                        form(action="exercise.html", name="form-5").exercise__item
+                                label.btn.btn-submit
+                                    span Отправить
+                                    +icons('#ic_send', 24)
+                                    input(type="submit")
+                        form(action="exercise.html", id="form-5").exercise__item
                             .title 5. Единицы информации
                             .desc Запишите правильные соотношения между единицами измерения информации
                             .btns
                                 a.download.btn(href="exercises/exercise-5.docx" download)
-                                    span Скачать
-                                    +icons('#ic_download', 24)
+                                    span Открыть
+                                    +icons('#ic_launch', 24)
                                 label.btn.btn-file
                                     span Загрузить
                                     +icons('#ic_upload', 24)
                                     input(type="file", name="file5")
-            .exercise__submit
+                                label.btn.btn-submit
+                                    span Отправить
+                                    +icons('#ic_send', 24)
+                                    input(type="submit")
+            //.exercise__submit
                     .exercise__submitTitle
                         .exercise__submitClose
                             +icons('#ic_close', 24)

@@ -29,10 +29,6 @@ section {
             width: 100%;
             margin-bottom: 24px;
 
-            &:hover {
-                background: #C2E7FF;
-            }
-
             .title {
                 font-size: 18px;
                 color: #0b57d0;
@@ -48,25 +44,44 @@ section {
 
             .btns {
                 display: flex;
+                margin: 0 -5px;
 
                 .btn {
-                    margin-right: 10px;
-                    width: 150px;
+                    margin: 0 5px;
+                    width: 160px;
 
                     svg {
                         margin-left: auto;
                     }
 
+                    &-submit {
+                        display: none;
+                    }
+
+                }
+
+                @media screen and (max-width: 660px) {
+                    flex-wrap: wrap;
+
+                    .btn {
+                        margin-top: 5px;
+                        margin-bottom: 5px;
+                    }
+                }
+
+                @media screen and (max-width: 480px) {
+                    .btn {
+                        width: calc(50% - 10px)
+                    }
                 }
 
                 @media screen and (max-width: 425px) {
-                    flex-wrap: wrap;
-                    width: 100%;
+                    margin: 0;
 
                     .btn {
                         width: 100%;
                         margin-right: 0;
-                        margin-bottom: 10px;
+                        margin-left: 0;
                     }
                 }
             }
@@ -76,7 +91,7 @@ section {
     }
 }
 
-.exercise__submit {
+/* .exercise__submit {
     border-radius: 16px;
     max-width: 360px;
     margin-left: auto;
@@ -132,4 +147,4 @@ section {
         display: inline-flex;
     }
 
-}
+} */
