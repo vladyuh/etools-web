@@ -87,14 +87,10 @@ $('.test__formSubmit .btn').on('click', function () {
   $(this).parents('.test__form').submit();
 });
 
-var form = [];
-
 $('form.exercise__item .btn input[type="file"]').on('change', function(){
   var files = this.files;
-  var current = $(this).parents('form');
   if(files.length != 0){
     var file = this.files[0].name;
-    form.push(current);
     console.log(files);
     $(this).parents('.btn').find('span').text(file);
     $('.exercise__submit').addClass('is-active');
@@ -102,13 +98,10 @@ $('form.exercise__item .btn input[type="file"]').on('change', function(){
   else{
     $(this).parents('.btn').find('span').text('Файл не выбран');
   }
-  console.log(form);   
 })
 
 $('.exercise__submitConfirm').on('click', function(){
-  form.forEach(item => {
-    item.submit();    
-  });
+  $('form.exercise__item').submit();
   $(this).parents('.exercise__submit').removeClass('is-active');
 });
 

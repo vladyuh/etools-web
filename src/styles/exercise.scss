@@ -90,9 +90,25 @@ section {
     overflow-y: auto;
     transition: all 0.5s ease;
     padding: 32px;
-    
+    box-shadow: 0 9px 46px 8px rgba(0, 0, 0, 0.14),
+        0 11px 15px -7px rgba(0, 0, 0, 0.12),
+        0 24px 38px 3px rgba(0, 0, 0, 0.20);
 
-    &.is-active{
+    @media screen and (max-width: 480px) {
+        left: 0;
+        right: 0;
+        max-width: 100%;
+        padding: 32px 24px;
+        border-radius: 0;
+
+        &.is-active {
+            bottom: 0;
+        }
+
+    }
+
+
+    &.is-active {
         bottom: 24px;
     }
 
@@ -112,7 +128,7 @@ section {
         margin-bottom: 30px;
     }
 
-    .btn{
+    .btn {
         display: inline-flex;
     }
 

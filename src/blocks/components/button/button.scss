@@ -17,13 +17,14 @@
 
   svg {
     margin-left: 10px;
+    flex-shrink: 0;
   }
 
   &-file,
   &-submit {
     span {
       white-space: nowrap;
-      text-overflow: clip;
+      text-overflow: ellipsis;
       overflow: hidden;
       flex-grow: 0;
     }
