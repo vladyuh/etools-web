@@ -28,7 +28,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
     <link rel="stylesheet" href="styles/main.min.css">
-    <link rel="stylesheet" href="styles/detail.min.css">
+    <link rel="stylesheet" href="styles/exercise.min.css">
   </head>
   <body class="perf-no-animation page">
     <header>
@@ -88,7 +88,7 @@
         <div class="container">
           <h2 class="section-h2">Задания</h2>
           <div class="exercise__items">
-            <form class="exercise__item" action="exercise.html">
+            <form class="exercise__item" action="exercise.html" name="form-1">
               <div class="title">1. Устройства компьютера</div>
               <div class="desc">Подпишите устройства компьютера, используя слова для справки</div>
               <div class="btns"><a class="download btn" href="exercises/exercise-1.docx" download><span>Скачать</span>
@@ -103,7 +103,7 @@
                 </label>
               </div>
             </form>
-            <form class="exercise__item" action="exercise.html">
+            <form class="exercise__item" action="exercise.html" name="form-2">
               <div class="title">2. Функции устройств</div>
               <div class="desc">Поставьте в соответствие устройствам компьютера, функции которые они выполняют</div>
               <div class="btns"><a class="download btn" href="exercises/exercise-2.docx" download><span>Скачать</span>
@@ -118,7 +118,7 @@
                 </label>
               </div>
             </form>
-            <form class="exercise__item" action="exercise.html">
+            <form class="exercise__item" action="exercise.html" name="form-3">
               <div class="title">3. Комплектующие системного блока</div>
               <div class="desc">Поставьте в соответствие текстовым полям правильные ответы</div>
               <div class="btns"><a class="download btn" href="exercises/exercise-3.docx" download><span>Скачать</span>
@@ -133,7 +133,7 @@
                 </label>
               </div>
             </form>
-            <form class="exercise__item" action="exercise.html">
+            <form class="exercise__item" action="exercise.html" name="form-4">
               <div class="title">4. Функциональные клавиши клавиатуры</div>
               <div class="desc">Напишите названия функциональных клавиш, выполняющих предлагаемые функции</div>
               <div class="btns"><a class="download btn" href="exercises/exercise-4.docx" download><span>Скачать</span>
@@ -148,7 +148,7 @@
                 </label>
               </div>
             </form>
-            <form class="exercise__item" action="exercise.html">
+            <form class="exercise__item" action="exercise.html" name="form-5">
               <div class="title">5. Единицы информации</div>
               <div class="desc">Запишите правильные соотношения между единицами измерения информации</div>
               <div class="btns"><a class="download btn" href="exercises/exercise-5.docx" download><span>Скачать</span>
@@ -166,6 +166,22 @@
           </div>
         </div>
       </section>
+      <div class="exercise__submit">
+        <div class="exercise__submitTitle">
+          <div class="exercise__submitClose">
+            <svg width="24" height="24">
+              <use xlink:href="./img/sprites/sprite.svg#ic_close"></use>
+            </svg>
+          </div>
+          <h2 class="section-h3">Загрузить                        </h2>
+        </div>
+        <div class="exercise__submitDesc">Загрузить выбранные файлы?</div>
+        <div class="exercise__submitConfirm btn"><span>Подтвердить</span>
+          <svg width="24" height="24">
+            <use xlink:href="./img/sprites/sprite.svg#ic_done"></use>
+          </svg>
+        </div>
+      </div>
     </main>
     <footer>
       <!--.container

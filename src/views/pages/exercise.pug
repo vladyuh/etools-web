@@ -37,7 +37,7 @@ html(lang="ru")
         link(rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png")
         link(rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png")
         link(rel="stylesheet" href="styles/main.css")
-        link(rel="stylesheet" href="styles/detail.css")
+        link(rel="stylesheet" href="styles/exercise.css")
     body.perf-no-animation.page
         header
             block header
@@ -79,7 +79,7 @@ html(lang="ru")
                 .container
                     h2.section-h2 Задания
                     .exercise__items
-                        form(action="exercise.html").exercise__item
+                        form(action="exercise.html", name="form-1").exercise__item
                             .title 1. Устройства компьютера
                             .desc Подпишите устройства компьютера, используя слова для справки
                             .btns
@@ -90,7 +90,7 @@ html(lang="ru")
                                     span Загрузить
                                     +icons('#ic_upload', 24)
                                     input(type="file", name="file1")
-                        form(action="exercise.html").exercise__item
+                        form(action="exercise.html", name="form-2").exercise__item
                             .title 2. Функции устройств
                             .desc Поставьте в соответствие устройствам компьютера, функции которые они выполняют
                             .btns
@@ -101,7 +101,7 @@ html(lang="ru")
                                     span Загрузить
                                     +icons('#ic_upload', 24)
                                     input(type="file", name="file2")
-                        form(action="exercise.html").exercise__item
+                        form(action="exercise.html", name="form-3").exercise__item
                             .title 3. Комплектующие системного блока
                             .desc Поставьте в соответствие текстовым полям правильные ответы
                             .btns
@@ -112,7 +112,7 @@ html(lang="ru")
                                     span Загрузить
                                     +icons('#ic_upload', 24)
                                     input(type="file", name="file3")
-                        form(action="exercise.html").exercise__item
+                        form(action="exercise.html", name="form-4").exercise__item
                             .title 4. Функциональные клавиши клавиатуры
                             .desc Напишите названия функциональных клавиш, выполняющих предлагаемые функции
                             .btns
@@ -123,7 +123,7 @@ html(lang="ru")
                                     span Загрузить
                                     +icons('#ic_upload', 24)
                                     input(type="file", name="file4")
-                        form(action="exercise.html").exercise__item
+                        form(action="exercise.html", name="form-5").exercise__item
                             .title 5. Единицы информации
                             .desc Запишите правильные соотношения между единицами измерения информации
                             .btns
@@ -134,7 +134,15 @@ html(lang="ru")
                                     span Загрузить
                                     +icons('#ic_upload', 24)
                                     input(type="file", name="file5")
-
+            .exercise__submit
+                    .exercise__submitTitle
+                        .exercise__submitClose
+                            +icons('#ic_close', 24)
+                        h2.section-h3 Загрузить                        
+                    .exercise__submitDesc Загрузить выбранные файлы?
+                    .exercise__submitConfirm.btn
+                        span Подтвердить
+                        +icons('#ic_done', 24)                        
         footer
             include ../../blocks/modules/footer/footer.pug
         block scripts
