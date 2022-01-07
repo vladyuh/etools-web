@@ -37,7 +37,7 @@ html(lang="ru")
         link(rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png")
         link(rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png")
         link(rel="stylesheet" href="styles/main.css")
-        link(rel="stylesheet" href="styles/detail.css")
+        link(rel="stylesheet" href="styles/exercise.css")
     body.perf-no-animation.page
         header
             block header
@@ -65,60 +65,44 @@ html(lang="ru")
                                 link: "section.html",
                                 text: "Знакомство с компьютером",
                             },
+                            {
+                                link: "test.html",
+                                text: "Оценки заданий",
+                            },
                         ])
-            section.detail
+            section.exercise
                 .container
-                    h2.section-h2 Темы
-                    .topics
-                        a(href="topic.html#tab-1").topics__item
-                            .topics__title Современные компьютерные устройства
-                            .topics__link
-                                span Перейти
-                                +icons('#ic_go',24)
-                        a(href="topic.html#tab-2").topics__item
-                            .topics__title Устройства компьютера
-                            .topics__link
-                                span Перейти
-                                +icons('#ic_go',24)
-                        a(href="topic.html#tab-3").topics__item
-                            .topics__title Работа с клавиатурой и мышью
-                            .topics__link
-                                span Перейти
-                                +icons('#ic_go',24)
-                        a(href="topic.html#tab-4").topics__item
-                            .topics__title Представление информации в компьютере
-                            .topics__link
-                                span Перейти
-                                +icons('#ic_go',24)
-                        a(href="topic.html#tab-5").topics__item
-                            .topics__title Правила работы за компьютером
-                            .topics__link
-                                span Перейти
-                                +icons('#ic_go',24)
-                    h2.section-h2 Задания
-                    .topics.exercises
-                        a(href="exercise.html").topics__item
-                            .topics__title Задания по теме "Знакомство с компьютером"
-                            .topics__link
-                                span Перейти
-                                +icons('#ic_go',24)
-                        a(href="exercise-results.html").topics__item
-                            .topics__title Оценки заданий "Знакомство с компьютером"
-                            .topics__link
-                                span Перейти
-                                +icons('#ic_go',24)
-                    h2.section-h2 Тесты
-                    .topics.tests
-                        a(href="test.html").topics__item
-                            .topics__title Контрольный тест по теме "Знакомство с компьютером"
-                            .topics__link
-                                span Перейти
-                                +icons('#ic_go',24)
-                        a(href="test-results.html").topics__item
-                            .topics__title Результаты теста по теме "Знакомство с компьютером"
-                            .topics__link
-                                span Перейти
-                                +icons('#ic_go',24)
+                    h2.section-h2 Оценки заданий
+                    .exercise__items
+                        .exercise__item
+                            .title 1. Устройства компьютера
+                            .desc Подпишите устройства компьютера, используя слова для справки
+                            .mark.section-h3 Ваша оценка - 7
+                        .exercise__item
+                            .title 2. Функции устройств
+                            .desc Поставьте в соответствие устройствам компьютера, функции которые они выполняют
+                            .mark.section-h3 Ваша оценка - 9
+                        .exercise__item
+                            .title 3. Комплектующие системного блока
+                            .desc Поставьте в соответствие текстовым полям правильные ответы
+                            .mark.section-h3 Ваша оценка - 8
+                        .exercise__item
+                            .title 4. Функциональные клавиши клавиатуры
+                            .desc Напишите названия функциональных клавиш, выполняющих предлагаемые функции
+                            .mark.section-h3 Ваша оценка - 9
+                        .exercise__item
+                            .title 5. Единицы информации
+                            .desc Запишите правильные соотношения между единицами измерения информации
+                            .mark.section-h3 Ваша оценка - 9
+            //.exercise__submit
+                    .exercise__submitTitle
+                        .exercise__submitClose
+                            +icons('#ic_close', 24)
+                        h2.section-h3 Загрузить                        
+                    .exercise__submitDesc Загрузить выбранные файлы?
+                    .exercise__submitConfirm.btn
+                        span Подтвердить
+                        +icons('#ic_done', 24)                        
         footer
             include ../../blocks/modules/footer/footer.pug
         block scripts

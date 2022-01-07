@@ -36,9 +36,8 @@ section {
             }
         }
 
-        &__form {}
-
-        &__formItem {
+        &__formItem,
+        &__results {
             padding: 32px;
             background: #F2F6FC;
             border-radius: 16px;
@@ -49,15 +48,61 @@ section {
 
         }
 
-        &__formQuestion {
+        &__results:last-child {
+            margin-bottom: 0;
+        }
+
+        &__formQuestion,
+        &__resultsQuestion {
             font-size: 18px;
             color: #0b57d0;
             font-weight: bold;
             margin: 0;
         }
 
-        &__formAnswers {
+        &__formAnswers,
+        &__resultsAnswers {
             margin-top: 10px;
+            font-weight: 600;
+
+            span {
+                font-weight: bold;
+
+                &.red {
+                    color: #EA4335;
+                }
+
+                &.green {
+                    color: #34A853;
+                }
+            }
+        }
+
+        &__resultsItem {
+            margin-bottom: 24px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &__date {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap-reverse;
+            margin-bottom: 14px;
+
+            .mark {
+                margin: 0;
+                color: #1F1F1F;
+            }
+
+            .date {
+                color: #1F1F1F;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
         }
 
         &__formRadio {
