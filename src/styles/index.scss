@@ -90,6 +90,15 @@ section.sections {
             color: #1F1F1F;
             margin-top: 16px;
             margin-bottom: 8px;
+
+            @media screen and (max-width: 480px) {
+                font-size: 28px;
+                line-height: 110%;
+            }
+
+            @media screen and (max-width: 360px) {
+                font-size: 24px;
+            }
         }
 
         .desc {
