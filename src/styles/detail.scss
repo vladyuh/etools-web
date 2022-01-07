@@ -41,7 +41,7 @@ section {
             &__item {
                 padding: 32px;
                 background: #F2F6FC;
-                border-radius: 16px;
+                border-radius: 24px;
                 width: calc(33.33% - 24px);
                 margin: 0 12px;
                 margin-bottom: 24px;
@@ -65,6 +65,7 @@ section {
                 padding-top: 16px;
                 font-weight: 600;
                 display: flex;
+                justify-content: space-between;
                 align-items: center;
 
                 svg {
