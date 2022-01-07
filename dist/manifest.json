@@ -1,5 +1,5 @@
 {
-  "background_color": "#ffffff",
+  "background_color": "#C2E7FF",
   "dir": "ltr",
   "display": "standalone",
   "name": "E-learning",
@@ -7,7 +7,7 @@
   "scope": "/",
   "short_name": "E-learning",
   "start_url": "/",
-  "theme_color": "#fff",
+  "theme_color": "#000",
   "icons": [{
       "src": "icons/windows11/SmallTile.scale-100.png",
       "sizes": "71x71"
