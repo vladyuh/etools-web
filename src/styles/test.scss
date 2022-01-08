@@ -36,8 +36,9 @@ section {
             }
         }
 
-        &__formItem,
-        &__results {
+        &__form {}
+
+        &__formItem {
             padding: 32px;
             background: #F2F6FC;
             border-radius: 24px;
@@ -48,21 +49,16 @@ section {
 
         }
 
-        &__results:last-child {
-            margin-bottom: 0;
-        }
-
-        &__formQuestion,
-        &__resultsQuestion {
+        &__formQuestion {
             font-size: 18px;
             color: #0b57d0;
             font-weight: bold;
             margin: 0;
         }
 
-        &__formAnswers,
-        &__resultsAnswers {
+        &__formAnswers {
             margin-top: 10px;
+<<<<<<< HEAD
             font-weight: 600;
 
             span {
@@ -102,6 +98,8 @@ section {
                 color: #1F1F1F;
                 font-weight: 600;
             }
+=======
+>>>>>>> parent of e8c4948... fixes
         }
 
         &__formRadio {
