@@ -1,8 +1,10 @@
+@import "../styles/helpers/variables";
+
 section {
 
     &.detail {
         .container {
-            max-width: 1024px;
+            max-width: 1124px;
         }
     }
 
@@ -40,48 +42,34 @@ section {
 
             &__item {
                 padding: 32px;
-                background: #F2F6FC;
+                background: $accent;
                 border-radius: 24px;
                 width: calc(33.33% - 24px);
                 margin: 0 12px;
                 margin-bottom: 24px;
                 display: flex;
-                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
                 transition: background 0.5s ease;
 
                 &:hover {
-                    background: #C2E7FF;
+                    background: $accentHover;
                 }
             }
 
             &__title {
-                color: #1F1F1F;
-                font-weight: bold;
+                color: $textPrimary;
+                font-weight: 600;
                 min-height: 48px;
+                display: flex;
+                align-items: center;
+                padding-right: 16px;
             }
 
             &__link {
-                margin-top: auto;
-                padding-top: 16px;
-                font-weight: 600;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                svg {
-                    margin-left: 10px;
-                }
-
-                span {
-                    color: #0b57d0;
-                    border-bottom: 1px solid transparent;
-                    transition: all 0.25s ease;
-                }
-
-                span:hover {
-                    color: #041E49;
-                    border-bottom: 1px solid #041E49;
-                }
+                width: 24px;
+                height: 24px;
+                margin-right: -12px;
             }
         }
 

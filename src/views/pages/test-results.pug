@@ -37,7 +37,7 @@ html(lang="ru")
         link(rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png")
         link(rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png")
         link(rel="stylesheet" href="styles/main.css")
-        link(rel="stylesheet" href="styles/detail.css")
+        link(rel="stylesheet" href="styles/test.css")
     body.perf-no-animation.page
         header
             block header
@@ -60,39 +60,34 @@ html(lang="ru")
                                 link: "section.html",
                                 text: "Устройства компьютера",
                             },
+                            {
+                                link: "test-results.html",
+                                text: "Результаты теста",
+                            },
                         ])
-            section.detail
+            section.test
                 .container
-                    h2.section-h2 Темы
-                    .topics
-                        a(href="topic.html#tab-1").topics__item
-                            .topics__title Современные компьютерные устройства
-                            .topics__link: +icons('#ic_next',24)
-                        a(href="topic.html#tab-2").topics__item
-                            .topics__title Устройства компьютера
-                            .topics__link: +icons('#ic_next',24)
-                        a(href="topic.html#tab-3").topics__item
-                            .topics__title Работа с клавиатурой и мышью
-                            .topics__link: +icons('#ic_next',24)
-                        a(href="topic.html#tab-4").topics__item
-                            .topics__title Представление информации в компьютере
-                            .topics__link: +icons('#ic_next',24)
-                        a(href="topic.html#tab-5").topics__item
-                            .topics__title Правила работы за компьютером
-                            .topics__link: +icons('#ic_next',24)
-                    h2.section-h2 Задания
-                    .topics.exercises
-                        a(href="exercise.html").topics__item
-                            .topics__title Задания по теме "Устройства компьютера"
-                            .topics__link: +icons('#ic_next',24)
-                    h2.section-h2 Тесты
-                    .topics.tests
-                        a(href="test.html").topics__item
-                            .topics__title Контрольный тест по теме "Устройства компьютера"
-                            .topics__link: +icons('#ic_next',24)
-                        a(href="test-results.html").topics__item
-                            .topics__title Результаты теста по теме "Устройства компьютера"
-                            .topics__link: +icons('#ic_next',24)
+                    .test__title
+                        h2.section-h2 Результаты теста
+                    .test__results
+                        .test__date
+                            .mark.section-h3 Ваша оценка - 7
+                            .date 07.01.2021
+                        .test__resultsItem
+                         .test__resultsQuestion 1. Какая клавиша удаляет символ, стоящий справа или над курсором?
+                         .test__resultsAnswers Ваш ответ: Backspace - <span class="red">Неверно</span>
+                        .test__resultsItem
+                         .test__resultsQuestion 2. Для чего предназначен процессор?
+                         .test__resultsAnswers Ваш ответ: Для обработки информации - <span class="green">Верно</span>
+                        .test__resultsItem
+                         .test__resultsQuestion 3. Укажите устройства внешней памяти?
+                         .test__resultsAnswers Ваш ответ: Жесткий диск, флеш-память, оптический диск - <span class="green">Верно</span>
+                        .test__resultsItem
+                         .test__resultsQuestion 4. Какие конструкции компьютера вам известны?
+                         .test__resultsAnswers Ваш ответ: Настольный и мобильный компьютер - <span class="green">Верно</span>
+                        .test__resultsItem
+                         .test__resultsQuestion 5. Как вызвать контекстное меню при работе с мышкой?
+                         .test__resultsAnswers Ваш ответ: Щелкнуть один раз правой кнопкой мыши - <span class="green">Верно</span>
         footer
             include ../../blocks/modules/footer/footer.pug
         block scripts

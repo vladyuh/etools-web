@@ -4,11 +4,11 @@ header {
     left: 0;
     right: 0;
     z-index: 3;
-    background: #fff;
+    background: $white;
     transition: all 0.5s ease;
 
     &.sticky {
-        background: #F2F6FC;
+        background: $accent;
     }
 
     .container {
@@ -33,7 +33,7 @@ header {
                 margin: 0 10px;
 
                 a {
-                    color: #1f1f1f;
+                    color: $textPrimary;
                     font-weight: 600;
                 }
             }

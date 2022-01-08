@@ -1,7 +1,9 @@
+@import "../styles/helpers/variables";
+
 section {
   &.tabs {
     .container {
-      max-width: 1024px;
+      max-width: 1124px;
     }
   }
 
@@ -14,8 +16,8 @@ section {
       align-items: center;
       overflow-x: auto;
       overflow-y: hidden;
-      background: #fff;
-      border-bottom: 1px solid #E1E3E1;
+      background: $white;
+      border-bottom: 1px solid $borderGrey;
 
       .toggle {
         cursor: pointer;
@@ -28,21 +30,21 @@ section {
         flex-shrink: 0;
         border-radius: 32px;
         margin-right: 16px;
-        color: #1F1F1F;
+        color: $textPrimary;
         line-height: 44px;
         font-size: 16px;
         transition: all 0.25s ease;
 
         &:hover {
-          background: #DFDFDF;
+          background: $tabHover;
         }
 
         &.is-active {
-          background: #C2E7FF;
-          color: #041E49;
+          background: $accentHover;
+          color: $btnDisabled;
 
           &:hover {
-            background: #7FCFFF;
+            background: $tabActiveHover;
           }
         }
       }

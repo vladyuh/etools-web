@@ -1,18 +1,18 @@
 .btn {
-  background: #0B57D0;
+  background: $btn;
   border-radius: 22px;
   height: 40px;
   display: flex;
   align-items: center;
   flex-grow: 0;
   padding: 0 22px;
-  color: #fff;
+  color: $white;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.25s ease;
 
   &:hover {
-    background: #0842A0;
+    background: $btnHover;
   }
 
   svg {

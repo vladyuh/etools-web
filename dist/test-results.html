@@ -101,7 +101,7 @@
               <ul>
                 <li><a href="index.html">Разделы</a></li>
                 <li><a href="section.html">Устройства компьютера</a></li>
-                <li><a href="test.html">Тест</a></li>
+                <li><a href="test-results.html">Результаты теста</a></li>
               </ul>
             </div>
           </div>
@@ -109,124 +109,35 @@
       </div>
       <section class="test">
         <div class="container">
-          <div class="test__title" id="test__title">
-            <h2 class="section-h2">Тест</h2>
-            <div class="test__start btn"><span>Начать</span>
-              <svg width="24" height="24">
-                <use xlink:href="./img/sprites/sprite.svg#ic_start"></use>
-              </svg>
+          <div class="test__title">
+            <h2 class="section-h2">Результаты теста</h2>
+          </div>
+          <div class="test__results">
+            <div class="test__date">
+              <div class="mark section-h3">Ваша оценка - 7</div>
+              <div class="date">07.01.2021</div>
+            </div>
+            <div class="test__resultsItem">
+              <div class="test__resultsQuestion">1. Какая клавиша удаляет символ, стоящий справа или над курсором?</div>
+              <div class="test__resultsAnswers">Ваш ответ: Backspace - <span class="red">Неверно</span></div>
+            </div>
+            <div class="test__resultsItem">
+              <div class="test__resultsQuestion">2. Для чего предназначен процессор?</div>
+              <div class="test__resultsAnswers">Ваш ответ: Для обработки информации - <span class="green">Верно</span></div>
+            </div>
+            <div class="test__resultsItem">
+              <div class="test__resultsQuestion">3. Укажите устройства внешней памяти?</div>
+              <div class="test__resultsAnswers">Ваш ответ: Жесткий диск, флеш-память, оптический диск - <span class="green">Верно</span></div>
+            </div>
+            <div class="test__resultsItem">
+              <div class="test__resultsQuestion">4. Какие конструкции компьютера вам известны?</div>
+              <div class="test__resultsAnswers">Ваш ответ: Настольный и мобильный компьютер - <span class="green">Верно</span></div>
+            </div>
+            <div class="test__resultsItem">
+              <div class="test__resultsQuestion">5. Как вызвать контекстное меню при работе с мышкой?</div>
+              <div class="test__resultsAnswers">Ваш ответ: Щелкнуть один раз правой кнопкой мыши - <span class="green">Верно</span></div>
             </div>
           </div>
-          <form class="test__form" action="test.html" id="formTest">
-            <div class="test__formItem">
-              <div class="test__formQuestion section-h3">Какая клавиша удаляет символ, стоящий справа или над курсором?</div>
-              <div class="test__formAnswers">
-                <div class="test__formRadio">                               
-                  <label>Del
-                    <input type="radio" required disabled name="answer1">
-                  </label>
-                </div>
-                <div class="test__formRadio">                               
-                  <label>Backspace
-                    <input type="radio" required disabled name="answer1">
-                  </label>
-                </div>
-                <div class="test__formRadio">
-                  <label>Insert
-                    <input type="radio" required disabled name="answer1">
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div class="test__formItem">
-              <div class="test__formQuestion section-h3">Для чего предназначен процессор?</div>
-              <div class="test__formAnswers">
-                <div class="test__formRadio">                               
-                  <label>Для охлаждения материнской платы
-                    <input type="radio" required disabled name="answer2">
-                  </label>
-                </div>
-                <div class="test__formRadio">
-                  <label>Для передачи информации
-                    <input type="radio" required disabled name="answer2">
-                  </label>
-                </div>
-                <div class="test__formRadio">
-                  <label>Для обработки информации
-                    <input type="radio" required disabled name="answer2">
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div class="test__formItem">
-              <div class="test__formQuestion section-h3">Укажите устройства внешней памяти?</div>
-              <div class="test__formAnswers">
-                <div class="test__formRadio">                               
-                  <label>Оптический диск, оперативная память, флеш-память
-                    <input type="radio" required disabled name="answer3">
-                  </label>
-                </div>
-                <div class="test__formRadio">
-                  <label>Жесткий диск, флеш-память, оптический диск
-                    <input type="radio" required disabled name="answer3">
-                  </label>
-                </div>
-                <div class="test__formRadio">
-                  <label>Оперативная память, жесткий диск, оптический диск
-                    <input type="radio" required disabled name="answer3">
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div class="test__formItem">
-              <div class="test__formQuestion section-h3">Какие конструкции компьютера вам известны?</div>
-              <div class="test__formAnswers">
-                <div class="test__formRadio">                               
-                  <label>Прикладной и настольный компьютер
-                    <input type="radio" required disabled name="answer4">
-                  </label>
-                </div>
-                <div class="test__formRadio">
-                  <label>Настольный и мобильный компьютер
-                    <input type="radio" required disabled name="answer4">
-                  </label>
-                </div>
-                <div class="test__formRadio">
-                  <label>Прикладной и мобильный компьютер
-                    <input type="radio" required disabled name="answer4">
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div class="test__formItem">
-              <div class="test__formQuestion section-h3">Как вызвать контекстное меню при работе с мышкой?</div>
-              <div class="test__formAnswers">
-                <div class="test__formRadio">
-                  <label>Дважды быстро нажать и отпустить левую кнопку мыши
-                    <input type="radio" required disabled name="answer5">
-                  </label>
-                </div>
-                <div class="test__formRadio">
-                  <label>Щелкнуть один раз правой кнопкой мыши
-                    <input type="radio" required disabled name="answer5">
-                  </label>
-                </div>
-                <div class="test__formRadio">
-                  <label>Нажать и удерживать нажатой левую кнопку
-                    <input type="radio" required disabled name="answer5">
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div class="test__formSubmit">
-              <label class="btn btn-submit hidden"><span>Окончить</span>
-                <input type="submit" name="submit">
-                <svg width="24" height="24">
-                  <use xlink:href="./img/sprites/sprite.svg#ic_send"></use>
-                </svg>
-              </label>
-            </div>
-          </form>
         </div>
       </section>
     </main>

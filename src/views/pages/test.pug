@@ -41,12 +41,7 @@ html(lang="ru")
     body.perf-no-animation.page
         header
             block header
-            +header([
-                {
-                    link: "/",
-                    title: 'Вход',
-                },
-            ])            
+            +header([{},])            
         +mobileMenu()
         main
             .pageTitle
@@ -55,7 +50,7 @@ html(lang="ru")
                         .pageTitle__image(
                             style="background-image: url(https://cdn.thewirecutter.com/wp-content/media/2021/03/allinonecomputers-2048px-00116-2x1-1.jpg?auto=webp&quality=75&crop=2:1&width=1024)"
                         )
-                        h1.section-h1.pageTitle__text Знакомство с компьютером
+                        h1.section-h1.pageTitle__text Устройства компьютера
                         +breadcrumb([
                             {
                                 link: "index.html",
@@ -63,7 +58,7 @@ html(lang="ru")
                             },
                             {
                                 link: "section.html",
-                                text: "Знакомство с компьютером",
+                                text: "Устройства компьютера",
                             },
                             {
                                 link: "test.html",
@@ -79,7 +74,7 @@ html(lang="ru")
                             +icons('#ic_start', 24)
                     form.test__form(action="test.html", id="formTest")
                         .test__formItem
-                         .test__formQuestion.section-h3 1. Какая клавиша удаляет символ, стоящий справа или над курсором?
+                         .test__formQuestion.section-h3 Какая клавиша удаляет символ, стоящий справа или над курсором?
                          .test__formAnswers
                             .test__formRadio                                
                                 label Del
@@ -91,7 +86,7 @@ html(lang="ru")
                                 label Insert
                                     input(type="radio", required, disabled, name="answer1")
                         .test__formItem
-                         .test__formQuestion.section-h3 2. Для чего предназначен процессор?
+                         .test__formQuestion.section-h3 Для чего предназначен процессор?
                          .test__formAnswers
                             .test__formRadio                                
                                 label Для охлаждения материнской платы
@@ -103,7 +98,7 @@ html(lang="ru")
                                 label Для обработки информации
                                     input(type="radio", required, disabled, name="answer2")
                         .test__formItem
-                         .test__formQuestion.section-h3 3. Укажите устройства внешней памяти?
+                         .test__formQuestion.section-h3 Укажите устройства внешней памяти?
                          .test__formAnswers
                             .test__formRadio                                
                                 label Оптический диск, оперативная память, флеш-память
@@ -115,7 +110,7 @@ html(lang="ru")
                                 label Оперативная память, жесткий диск, оптический диск
                                     input(type="radio", required, disabled, name="answer3")
                         .test__formItem
-                         .test__formQuestion.section-h3 4. Какие конструкции компьютера вам известны?
+                         .test__formQuestion.section-h3 Какие конструкции компьютера вам известны?
                          .test__formAnswers
                             .test__formRadio                                
                                 label Прикладной и настольный компьютер
@@ -127,7 +122,7 @@ html(lang="ru")
                                 label Прикладной и мобильный компьютер
                                     input(type="radio", required, disabled, name="answer4")
                         .test__formItem
-                         .test__formQuestion.section-h3 5. Как вызвать контекстное меню при работе с мышкой?
+                         .test__formQuestion.section-h3 Как вызвать контекстное меню при работе с мышкой?
                          .test__formAnswers
                             .test__formRadio
                                 label Дважды быстро нажать и отпустить левую кнопку мыши

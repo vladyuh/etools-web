@@ -29,8 +29,14 @@ initTabs('section.tabs', 'section.tabs .toggle', 'section.tabs .content');
 var location = window.location.href;
 var anchor = location.split('#');
 
-$('section.tabs .toggle[data-toggle="'+anchor[1]+'"]').addClass('is-active');
-$('section.tabs .content[data-content="'+anchor[1]+'"]').addClass('is-active');
+
+var toggle = $('section.tabs .toggle[data-toggle="'+anchor[1]+'"]');
+var content = $('section.tabs .content[data-content="'+anchor[1]+'"]');
+toggle.addClass('is-active');
+content.addClass('is-active');
+
+
+
 
 //Browser-level image lazy-loading
 if ('loading' in HTMLImageElement.prototype) 

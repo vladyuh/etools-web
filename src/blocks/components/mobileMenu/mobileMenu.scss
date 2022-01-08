@@ -7,7 +7,7 @@
     bottom: 0;
     transform: translateX(-100%);
     width: 280px;
-    background: #fff;
+    background: $white;
     transition: transform 0.3s ease;
     overflow-y: auto;
     overflow-x: hidden;
@@ -75,7 +75,7 @@
             a {
                 padding: 8px 16px;
                 min-height: 48px;
-                color: #1f1f1f;
+                color: $textPrimary;
                 display: flex;
                 align-items: center;
                 font-size: 16px;
@@ -85,7 +85,7 @@
                 transition: all 0.25s ease;
 
                 &:hover {
-                    background: #E3E3E3;
+                    background: $accent;
                 }
 
             }

@@ -9,28 +9,25 @@ section.sections {
 .sections {
 
     .container {
-        max-width: 1200px;
+        max-width: 1300px;
     }
 
     .section-h1 {
+        font-size: 64px;
         margin-bottom: 40px;
         padding: 0 16px;
-        text-align: center;
+
+        @media screen and (max-width: 960px) {
+            font-size: 45px;
+        }
+
+        @media screen and (max-width: 480px) {
+            font-size: 36px;
+        }
     }
 
     .swiper {
-        overflow: visible;
-
         margin: 0 auto;
-    }
-
-    &-pagination {
-        position: relative;
-        padding-top: 36px;
-
-        .swiper-pagination {
-            position: static;
-        }
     }
 
     .swiper-wrapper {
@@ -46,14 +43,17 @@ section.sections {
         overflow: hidden;
         max-width: 100%;
         width: calc(50% - 12px);
-        margin-bottom: 24px;
+        margin-bottom: 40px;
 
         @media screen and (max-width: 960px) {
             width: 100%;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
 
         &:hover {
-
             .image {
                 border-radius: 24px;
             }
@@ -63,10 +63,15 @@ section.sections {
         .image {
             position: relative;
             padding-top: 50%;
-            background: #fff;
-            transition: all cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+            background: $white;
+            transition: border-radius cubic-bezier(0.4, 0, 0.2, 1) 250ms;
             border-radius: 64px;
             overflow: hidden;
+
+            @media screen and (max-width: 480px) {
+                padding-top: 100%;
+                border-radius: 64px;
+            }
 
 
 
@@ -79,41 +84,35 @@ section.sections {
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
-                object-position: center;
+                object-position: 40%;
             }
         }
 
         .title {
-            font-size: 32px;
-            line-height: 40px / 32px * 100%;
             padding: 0 16px;
-            color: #1F1F1F;
-            margin-top: 16px;
-            margin-bottom: 8px;
+            color: $textPrimary;
+            font-size: 32px;
+            margin: 16px 0 8px 0;
 
             @media screen and (max-width: 480px) {
-                font-size: 28px;
-                line-height: 110%;
-            }
-
-            @media screen and (max-width: 360px) {
                 font-size: 24px;
             }
         }
 
         .desc {
             font-size: 16px;
-            line-height: 24px / 16px * 100%;
+            line-height: 150%;
             padding: 0 16px;
-            padding-bottom: 16px;
-            color: #444746;
+            color: $textSecondary;
+            text-align: justify;
         }
 
         .goto {
+            display: none !important;
             font-weight: 600;
-            padding: 16px 16px 27px;
+            padding: 8px 16px;
             margin-top: auto;
-            display: none;
+            display: flex;
             align-items: center;
 
             svg {
@@ -121,14 +120,15 @@ section.sections {
             }
 
             span {
-                color: #0b57d0;
+                font-size: 16px;
+                color: $btn;
                 border-bottom: 1px solid transparent;
                 transition: all 0.25s ease;
             }
 
             span:hover {
-                color: #041E49;
-                border-bottom: 1px solid #041E49;
+                color: $btnDisabled;
+                border-bottom: 1px solid $btnDisabled;
             }
         }
     }

@@ -6,12 +6,12 @@ mixin mobileMenu()
         +close()
     .mobileMenu-nav
       ul.mobileMenu-nav__ul
-        li: a(href="/") Вход
+        li: a vladuks123.vv
         li
           a(href="index.html") Разделы
           .dropdown: +icons('#ic_dropdown', 24)
           ul.submenu
-            li: a(href="section.html") Знакомство с компьютером
+            li: a(href="section.html") Устройства компьютера
             li: a(href="section.html") Операционные системы
             li: a(href="section.html") Архивация данных
             li: a(href="section.html") Вирусы и антивирусы
@@ -21,4 +21,24 @@ mixin mobileMenu()
             li: a(href="section.html") Работа в Microsoft PowerPoint
             li: a(href="section.html") Глобальная сеть Internet
             li: a(href="section.html") Облачные технологии
+    .mobileMenu-footer
+      ul.mobileMenu-nav__ul
+        li: a(href="login.html") Выход
+mixin mobileMenuReg()
+  .mobileMenu
+    .mobileMenu-header
+      .mobileMenu-header__toggle
+        +close()
+    .mobileMenu-nav
+      ul.mobileMenu-nav__ul
+        li: a(href="/register.html") Регистрация
+    .mobileMenu-footer
+mixin mobileMenuLog()
+  .mobileMenu
+    .mobileMenu-header
+      .mobileMenu-header__toggle
+        +close()
+    .mobileMenu-nav
+      ul.mobileMenu-nav__ul
+        li: a(href="/login.html") Войти
     .mobileMenu-footer
