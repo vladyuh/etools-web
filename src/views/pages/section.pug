@@ -67,32 +67,53 @@ html(lang="ru")
                     .topics
                         a(href="topic.html#tab-1").topics__item
                             .topics__title Современные компьютерные устройства
-                            .topics__link: +icons('#ic_next',24)
+                            .topics__link
+                                span Перейти
+                                +icons('#ic_go',24)
                         a(href="topic.html#tab-2").topics__item
                             .topics__title Устройства компьютера
-                            .topics__link: +icons('#ic_next',24)
+                            .topics__link
+                                span Перейти
+                                +icons('#ic_go',24)
                         a(href="topic.html#tab-3").topics__item
                             .topics__title Работа с клавиатурой и мышью
-                            .topics__link: +icons('#ic_next',24)
+                            .topics__link
+                                span Перейти
+                                +icons('#ic_go',24)
                         a(href="topic.html#tab-4").topics__item
                             .topics__title Представление информации в компьютере
-                            .topics__link: +icons('#ic_next',24)
+                            .topics__link
+                                span Перейти
+                                +icons('#ic_go',24)
                         a(href="topic.html#tab-5").topics__item
                             .topics__title Правила работы за компьютером
-                            .topics__link: +icons('#ic_next',24)
+                            .topics__link
+                                span Перейти
+                                +icons('#ic_go',24)
                     h2.section-h2 Задания
                     .topics.exercises
                         a(href="exercise.html").topics__item
                             .topics__title Задания по теме "Устройства компьютера"
-                            .topics__link: +icons('#ic_next',24)
+                            .topics__link
+                                span Перейти
+                                +icons('#ic_go',24)
+                        //a(href="exercise-results.html").topics__item
+                            .topics__title Оценки заданий "Устройства компьютера"
+                            .topics__link
+                                span Перейти
+                                +icons('#ic_go',24)
                     h2.section-h2 Тесты
                     .topics.tests
                         a(href="test.html").topics__item
                             .topics__title Контрольный тест по теме "Устройства компьютера"
-                            .topics__link: +icons('#ic_next',24)
+                            .topics__link
+                                span Перейти
+                                +icons('#ic_go',24)
                         a(href="test-results.html").topics__item
                             .topics__title Результаты теста по теме "Устройства компьютера"
-                            .topics__link: +icons('#ic_next',24)
+                            .topics__link
+                                span Перейти
+                                +icons('#ic_go',24)
         footer
             include ../../blocks/modules/footer/footer.pug
         block scripts

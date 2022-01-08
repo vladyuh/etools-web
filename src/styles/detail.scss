@@ -48,8 +48,7 @@ section {
                 margin: 0 12px;
                 margin-bottom: 24px;
                 display: flex;
-                justify-content: space-between;
-                align-items: center;
+                flex-direction: column;
                 transition: background 0.5s ease;
 
                 &:hover {
@@ -61,15 +60,30 @@ section {
                 color: $textPrimary;
                 font-weight: 600;
                 min-height: 48px;
-                display: flex;
-                align-items: center;
-                padding-right: 16px;
             }
 
             &__link {
-                width: 24px;
-                height: 24px;
-                margin-right: -12px;
+                margin-top: auto;
+                padding-top: 16px;
+                font-weight: 600;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                svg {
+                    margin-left: 10px;
+                }
+
+                span {
+                    color: $btn;
+                    border-bottom: 1px solid transparent;
+                    transition: all 0.25s ease;
+                }
+
+                span:hover {
+                    color: #041E49;
+                    border-bottom: 1px solid #041E49;
+                }
             }
         }
 

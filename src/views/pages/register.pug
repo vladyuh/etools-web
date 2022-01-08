@@ -40,10 +40,7 @@ html(lang="ru")
 	body.perf-no-animation.page
 		header
 			block header
-			+header([
-				{
-				},
-			])            
+			+header([{},])           
 		+mobileMenuLog()
 		main
 			section.login
@@ -60,10 +57,9 @@ html(lang="ru")
 							input(type="password", name="password", required)
 						.submit
 							.register: a(href="login.html") Войти
-							label.btn.btn-submit
+							label.btn.btn-submit.rect
 								span Регистрация
 								input(type="submit", value="")
-								+icons('#ic_next-wh', 24)
 		//footer
 			include ../../blocks/modules/footer/footer.pug
 		block scripts

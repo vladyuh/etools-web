@@ -11,6 +11,10 @@
   cursor: pointer;
   transition: all 0.25s ease;
 
+  &.rect {
+    border-radius: 8px;
+  }
+
   &:hover {
     background: $btnHover;
   }
