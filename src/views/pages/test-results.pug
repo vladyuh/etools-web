@@ -70,24 +70,38 @@ html(lang="ru")
                     .test__title
                         h2.section-h2 Результаты теста
                     .test__results
-                        //.test__date
-                            .mark.section-h3 Ваша оценка - 7
-                            .date 07.01.2021
-                        .test__resultsItem
-                         .test__resultsQuestion 1. Какая клавиша удаляет символ, стоящий справа или над курсором?
-                         .test__resultsAnswers Ваш ответ: Backspace - <span class="red">Неверно</span>
-                        .test__resultsItem
-                         .test__resultsQuestion 2. Для чего предназначен процессор?
-                         .test__resultsAnswers Ваш ответ: Для обработки информации - <span class="green">Верно</span>
-                        .test__resultsItem
-                         .test__resultsQuestion 3. Укажите устройства внешней памяти?
-                         .test__resultsAnswers Ваш ответ: Жесткий диск, флеш-память, оптический диск - <span class="green">Верно</span>
-                        .test__resultsItem
-                         .test__resultsQuestion 4. Какие конструкции компьютера вам известны?
-                         .test__resultsAnswers Ваш ответ: Настольный и мобильный компьютер - <span class="green">Верно</span>
-                        .test__resultsItem
-                         .test__resultsQuestion 5. Как вызвать контекстное меню при работе с мышкой?
-                         .test__resultsAnswers Ваш ответ: Щелкнуть один раз правой кнопкой мыши - <span class="green">Верно</span>
+                        .test__resultsMark
+                            .section-h3 Ваша оценка - 4
+                        .test__formItem
+                            .test__formQuestion.section-h3 1. &nbsp;Какая клавиша удаляет символ, стоящий справа или над курсором?
+                            .test__formAnswers
+                                .test__formRadio                                
+                                    label Del
+                            .test__badge.btn.success Правильно
+                        .test__formItem
+                            .test__formQuestion.section-h3 2. &nbsp;Для чего предназначен процессор?
+                            .test__formAnswers
+                                .test__formRadio                                
+                                    label Для охлаждения материнской платы
+                            .test__badge.btn.error Неправильно
+                        .test__formItem
+                            .test__formQuestion.section-h3 3. &nbsp;Укажите устройства внешней памяти?
+                            .test__formAnswers
+                                .test__formRadio                                
+                                    label Оптический диск, оперативная память, флеш-память
+                            .test__badge.btn.error Неправильно
+                        .test__formItem
+                            .test__formQuestion.section-h3 4. &nbsp;Какие конструкции компьютера вам известны?
+                            .test__formAnswers
+                                .test__formRadio                                
+                                    label Мобильный и настольный компьютер
+                            .test__badge.btn.success Правильно
+                        .test__formItem
+                            .test__formQuestion.section-h3 5. &nbsp;Как вызвать контекстное меню при работе с мышкой?
+                            .test__formAnswers
+                                .test__formRadio
+                                        label Дважды быстро нажать и отпустить левую кнопку мыши
+                            .test__badge.btn.error Неправильно
         footer
             include ../../blocks/modules/footer/footer.pug
         block scripts
