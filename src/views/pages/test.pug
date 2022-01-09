@@ -69,7 +69,7 @@ html(lang="ru")
                 .container
                     .test__title#test__title
                         h2.section-h2 Тест
-                        .test__start.btn
+                        .test__start.btn.rect
                             span Начать
                             +icons('#ic_start', 24)
                     form.test__form(action="test.html", id="formTest")
@@ -134,7 +134,7 @@ html(lang="ru")
                                 label Нажать и удерживать нажатой левую кнопку
                                     input(type="radio", required, disabled, name="answer5")
                         .test__formSubmit
-                            label.btn.btn-submit.hidden
+                            label.btn.btn-submit.rect.hidden
                                 span Окончить
                                 input(type="submit", name="submit")
                                 +icons('#ic_send',24) 

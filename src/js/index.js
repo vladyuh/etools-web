@@ -76,7 +76,7 @@ if ('serviceWorker' in navigator) {
 
 /* Timer for tests */
 $('.test__start.btn').on('click', function () {
-  $(this).hide();
+  $(this).css('opacity',"0");
   $('.test__formAnswers input').removeAttr('disabled');
   $('.test__formSubmit .btn').removeClass('hidden');
 

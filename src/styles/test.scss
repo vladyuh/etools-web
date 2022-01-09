@@ -1,3 +1,5 @@
+@import "../styles/helpers/variables";
+
 section {
     &.test {
         padding: 64px 0;
@@ -36,89 +38,57 @@ section {
             }
         }
 
+        &__formAnswers {
+            width: 100%;
+        }
+
         &__formItem,
-        &__results {
-            padding: 32px;
-            background: #F2F6FC;
-            border-radius: 24px;
+        &__resultsMark {
+            padding: 24px;
+            background: #fff;
+            border-radius: 8px;
             margin-bottom: 24px;
             display: flex;
             flex-direction: column;
+            align-items: flex-start;
             transition: background 0.5s ease;
+            border: 1px solid $borderGrey;
 
-        }
-
-        &__results:last-child {
-            margin-bottom: 0;
         }
 
         &__formQuestion,
-        &__resultsQuestion {
+        &__resultsMark .section-h3 {
             font-size: 18px;
-            color: #0b57d0;
-            font-weight: bold;
+            line-height: 24px;
+            color: $black;
+            font-weight: 600;
             margin: 0;
         }
 
-        &__formAnswers,
-        &__resultsAnswers {
-            margin-top: 10px;
-            font-weight: 600;
-
-            span {
-                font-weight: bold;
-
-                &.red {
-                    color: #EA4335;
-                }
-
-                &.green {
-                    color: #34A853;
-                }
-            }
-        }
-
-        &__resultsItem {
-            margin-bottom: 24px;
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-
-        &__date {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap-reverse;
-            margin-bottom: 14px;
-
-            .mark {
-                margin: 0;
-                color: #1F1F1F;
-            }
-
-            .date {
-                color: #1F1F1F;
-                font-weight: 600;
-            }
-        }
-
         &__formRadio {
-            margin: 10px 0;
+            margin: 16px 0;
             display: flex;
             align-items: center;
+            width: 100%;
 
             label {
-                color: #1F1F1F;
+                color: $textPrimary;
+                font-size: 14px;
+                line-height: 18px;
                 font-weight: 600;
                 display: flex;
                 flex-direction: row-reverse;
                 align-items: center;
                 cursor: pointer;
+                width: 100%;
+                justify-content: flex-end;
 
                 input {
                     margin-right: 10px;
+                    width: 18px;
+                    height: 18px;
+                    min-width: 18px;
+                    flex-shrink: 0;
                 }
             }
         }
@@ -134,6 +104,25 @@ section {
             @media screen and (max-width: 535px) {
                 justify-content: center;
 
+            }
+        }
+
+        &__badge {
+            display: flex;
+            justify-content: center;
+            background: none !important;
+            color: $textPrimary;
+
+            @media screen and (max-width: 375px) {
+                width: 100%;
+            }
+
+            &.error {
+                border: 2px solid #EA4335;
+            }
+
+            &.success {
+                border: 2px solid #34A853;
             }
         }
     }
