@@ -47,6 +47,11 @@
               <li><a></a></li>
             </ul>
           </div>
+          <div class="header-darkMode">
+            <svg width="24" height="24">
+              <use xlink:href="./img/sprites/sprite.svg#ic_dark"></use>
+            </svg>
+          </div>
         </div>
       </div>
     </header>
@@ -91,6 +96,18 @@
     </main>
     <!--footerinclude ../../blocks/modules/footer/footer.pug
     -->
+    <div class="status__popup">
+      <div class="status__popupTitle">
+        <div class="status__popupClose">
+          <svg width="24" height="24">
+            <use xlink:href="./img/sprites/sprite.svg#ic_close"></use>
+          </svg>
+        </div>
+        <h2 class="section-h3">Ошибка                     </h2>
+      </div>
+      <div class="status__popupDesc">Такого пользователя нет</div>
+      <div class="status__popupConfirm btn"><span>Понятно</span></div>
+    </div>
     <script src="js/main.min.js"></script>
     <script src="js/vendor.min.js"></script>
   </body>

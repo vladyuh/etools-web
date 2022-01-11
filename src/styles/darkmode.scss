@@ -1,0 +1,103 @@
+@import "../styles/helpers/variables";
+
+body {
+  &.dark {
+    background: #121212;
+    color: #e3e3e3;
+
+    .image,
+    .loginForm {
+      background: #121212 !important;
+    }
+
+    .loginForm .fields input {
+      background: none;
+    }
+
+    .sections .swiper-slide .title,
+    .sections .swiper-slide .desc {
+      color: #e3e3e3;
+    }
+
+    .mobileMenu {
+      background: #1F2227;
+
+      svg {
+        fill: #fff;
+      }
+
+      &-nav__ul li a {
+        color: #fff;
+        background: #1F2227 !important;
+      }
+    }
+
+    header {
+      background-color: #121212;
+
+      svg {
+        fill: #e3e3e3;
+      }
+
+      &.sticky {
+        background-color: #1F2227;
+      }
+    }
+
+    .tabs__toggles {
+      background-color: #121212;
+
+      .toggle {
+        color: #e3e3e3;
+      }
+    }
+
+    .footer {
+      background: #1F2227;
+    }
+
+    .section {
+
+
+      &-h1,
+      &-h2,
+      &-h3 {
+        color: #e3e3e3;
+      }
+    }
+
+    .pageTitle__text {
+      color: $textPrimary;
+    }
+
+    .topics__item,
+    .exercise__item,
+    .test__formItem,
+    .test__resultsMark {
+      background: #121212 !important;
+
+      .section-h3,
+      .title,
+      .desc,
+      label {
+        color: #e3e3e3;
+      }
+    }
+
+    .topics__title,
+    section .test__badge {
+      color: #e3e3e3 !important;
+    }
+
+    .footer-desc__text,
+    .footer ul li a {
+      color: #e3e3e3;
+    }
+
+    .edit-content table.no-borders th img,
+    .edit-content table.no-borders tr img {
+      mix-blend-mode: normal;
+    }
+
+  }
+}

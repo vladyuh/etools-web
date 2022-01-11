@@ -1,4 +1,6 @@
-import { each } from "jquery";
+import {
+  each
+} from "jquery";
 import {
   mobileInit
 } from "../blocks/components/mobileMenu/mobileMenu";
@@ -30,8 +32,8 @@ var location = window.location.href;
 var anchor = location.split('#');
 
 
-var toggle = $('section.tabs .toggle[data-toggle="'+anchor[1]+'"]');
-var content = $('section.tabs .content[data-content="'+anchor[1]+'"]');
+var toggle = $('section.tabs .toggle[data-toggle="' + anchor[1] + '"]');
+var content = $('section.tabs .content[data-content="' + anchor[1] + '"]');
 toggle.addClass('is-active');
 content.addClass('is-active');
 
@@ -39,15 +41,12 @@ content.addClass('is-active');
 
 
 //Browser-level image lazy-loading
-if ('loading' in HTMLImageElement.prototype) 
-{
+if ('loading' in HTMLImageElement.prototype) {
   const images = document.querySelectorAll('img[loading="lazy"]');
   images.forEach(img => {
     img.src = img.dataset.src;
   });
-} 
-else
-{
+} else {
   const script = document.createElement('script');
   script.src =
     'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.1/lazysizes.min.js';
@@ -76,7 +75,7 @@ if ('serviceWorker' in navigator) {
 
 /* Timer for tests */
 $('.test__start.btn').on('click', function () {
-  $(this).css('opacity',"0");
+  $(this).css('opacity', "0");
   $('.test__formAnswers input').removeAttr('disabled');
   $('.test__formSubmit .btn').removeClass('hidden');
 
@@ -93,21 +92,50 @@ $('.test__formSubmit .btn').on('click', function () {
   $(this).parents('.test__form').submit();
 });
 
-$('form.exercise__item .btn input[type="file"]').on('change', function(){
+$('form.exercise__item .btn input[type="file"]').on('change', function () {
   var files = this.files;
-  if(files.length != 0){
+  if (files.length != 0) {
     var file = this.files[0].name;
     console.log(files);
     $(this).parents('.btn').find('span').text(file);
     $(this).parents('form.exercise__item .btns').find('.btn-submit').css("display", "flex");
-  }
-  else{
+  } else {
     $(this).parents('.btn').find('span').text('Файл не выбран');
     $(this).parents('form.exercise__item .btns').find('.btn-submit').hide();
   }
 })
 
-$('.mobileMenu-nav__ul > li > .dropdown').on('click',function(){
+$('.mobileMenu-nav__ul > li > .dropdown').on('click', function () {
   $(this).parents('.mobileMenu-nav__ul > li').toggleClass('is-active');
   $(this).toggleClass('is-active');
 })
+
+//dark mode check and set
+
+var dark = localStorage.getItem("darkmode");
+
+if (dark == "enabled") {
+  $("body").addClass("dark");
+  $(".header-darkMode").addClass('enabled');
+} else {
+  $("body").removeClass("dark");
+  $(".header-darkMode").removeClass('enabled');
+}
+
+$(".header-darkMode").click(function () {
+  if ($(this).hasClass("enabled")) {
+    localStorage.clear();
+    $(this).removeClass("enabled");
+    localStorage.setItem("darkmode", "disabled");
+    $("body").removeClass("dark");
+  } else {
+    localStorage.clear();
+    $(this).addClass("enabled");
+    $("body").addClass("dark");
+    localStorage.setItem("darkmode", "enabled");
+  }
+});
+
+$('.status__popupClose, .status__popupConfirm').on('click', function(){
+  $(this).parents('.status__popup').removeClass('is-active');
+});

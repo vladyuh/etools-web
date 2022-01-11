@@ -61,6 +61,14 @@ html(lang="ru")
 							
 		//footer
 			include ../../blocks/modules/footer/footer.pug
+		.status__popup
+			.status__popupTitle
+				.status__popupClose
+					+icons('#ic_close', 24)
+				h2.section-h3 Ошибка                     
+			.status__popupDesc Такого пользователя нет
+			.status__popupConfirm.btn
+				span Понятно
 		block scripts
 			script(src="js/main.js")
 			script(src="js/vendor.js")
