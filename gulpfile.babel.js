@@ -23,6 +23,7 @@ const requireDir = require("require-dir"),
                 "./src/styles/topic.{scss,sass}",
                 "./src/styles/exercise.{scss,sass}",
                 "./src/styles/test.{scss,sass}",
+                "./src/styles/exercises.{scss,sass}",
             ],
             dist: "./dist/styles/",
             watch: [
