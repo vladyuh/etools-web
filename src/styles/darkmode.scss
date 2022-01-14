@@ -57,14 +57,7 @@ body {
       background-color: $darkBack;
 
       .toggle {
-        color: $textLight !important;
-        background: $darkBack !important;
-
-        &.is-active {
-          background: $btnDark !important;
-          color: $white !important;
-        }
-
+        color: $textLight;
       }
     }
 
