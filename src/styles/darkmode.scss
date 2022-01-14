@@ -5,6 +5,10 @@ body {
     background: $darkBack;
     color: $textLight;
 
+    .link {
+      color: $btnDark;
+    }
+
     .image,
     .loginForm {
       background: $darkBack !important;

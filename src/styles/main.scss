@@ -10,6 +10,11 @@
 //dark mode styles
 @import "../styles/darkmode.scss";
 
+.link {
+    color: $btn;
+    text-decoration: underline;
+    font-weight: 600;
+}
 
 .pageTitle {
     margin: 24px 0 0;
@@ -243,4 +248,32 @@ section {
         display: inline-flex;
     }
 
+}
+
+section.not-found {
+    margin-top: -69px;
+    padding-top: 69px;
+    min-height: 100vh;
+    display: flex;
+    text-align: center;
+
+    .container {
+        max-width: 1300px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img {
+        margin-bottom: 24px;
+        max-width: 620px;
+        width: 100%;
+        height: auto;
+    }
+
+    .section-h2 {
+        margin-bottom: 16px;
+    }
 }
