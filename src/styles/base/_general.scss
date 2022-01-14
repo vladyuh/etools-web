@@ -68,10 +68,6 @@ body {
         background: $white;
     }
 
-    &.fixed {
-        overflow: hidden;
-    }
-
     &.mobile::after {
         content: "";
         position: fixed;

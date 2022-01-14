@@ -82,14 +82,13 @@ section {
                 }
 
                 span {
-                    color: $btn;
+                    color: $link;
                     border-bottom: 1px solid transparent;
                     transition: all 0.25s ease;
                 }
 
                 span:hover {
-                    color: #041E49;
-                    border-bottom: 1px solid #041E49;
+                    border-bottom: 1px solid $link;
                 }
             }
         }
