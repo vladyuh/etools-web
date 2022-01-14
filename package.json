@@ -73,8 +73,7 @@
     },
     "dependencies": {
         "inputmask": "^5.0.6",
-        "jquery": "^3.6.0",
-        "smart-grid": "^2.1.2"
+        "jquery": "^3.6.0"
     },
     "husky": {
         "hooks": {

@@ -1,7 +1,4 @@
 import {
-  each
-} from "jquery";
-import {
   mobileInit
 } from "../blocks/components/mobileMenu/mobileMenu";
 import {
