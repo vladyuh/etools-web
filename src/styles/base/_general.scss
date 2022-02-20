@@ -12,7 +12,7 @@ html {
     background: $white;
     color: $black;
     letter-spacing: normal;
-    font-family: 'Product Sans';
+    font-family: 'Product Sans', sans-serif;
 }
 
 button:active,
@@ -127,20 +127,19 @@ main {
     }
 }
 
+.edit-content * {
+    font-family: 'Product Sans', sans-serif !important;
+}
+
 .edit-content p {
     font-size: 14px;
     line-height: 160%;
+    font-weight: normal !important;
+    color: $textPrimary;
 }
 
-.edit-content a {
-    color: #84cdff;
-    font-size: 15px;
-    font-weight: 600;
-    line-height: 180%
-}
-
-.edit-content bold {
-    font-weight: 700 !important
+.edit-content p img {
+    margin: 0 auto;
 }
 
 .edit-content ol {
@@ -155,11 +154,6 @@ main {
     counter-increment: item;
     font-size: 15px;
     line-height: 180%;
-    color: #455762
-}
-
-.edit-content ol li p {
-    margin: 5px 0
 }
 
 .edit-content ol li::before {
@@ -171,7 +165,6 @@ main {
     font-weight: 700;
     font-size: 14px;
     line-height: 180%;
-    color: #8488e8
 }
 
 .edit-content ul {
@@ -183,7 +176,6 @@ main {
     position: relative;
     font-size: 15px;
     line-height: 180%;
-    color: #455762
 }
 
 .edit-content ul li::before {
@@ -194,31 +186,15 @@ main {
     display: block;
     width: 7px;
     height: 7px;
-    background: #8488e8;
+    background: $black;
     border-radius: 50%
 }
 
-.edit-content .table {
-    overflow-x: auto;
-    margin: 35px 0 0
-}
-
 .edit-content table {
-    width: 100%;
-    border-collapse: collapse
+    width: 100% !important;
 }
 
-.edit-content table.no-borders {
-    border-collapse: separate;
-
-    th,
-    tr {
-        padding: 0;
-        border: none;
-
-        img {
-            width: 100%;
-            mix-blend-mode: multiply;
-        }
-    }
+.edit-content table img {
+    width: 100% !important;
+    height: auto !important;
 }

@@ -4,6 +4,7 @@ import {
 import {
   initTabs
 } from "../blocks/components/tabs/tabs";
+import Cookies from 'js-cookie';
 
 //Remove animations on load
 window.onload = function () {
@@ -34,7 +35,11 @@ var content = $('section.tabs .content[data-content="' + anchor[1] + '"]');
 toggle.addClass('is-active');
 content.addClass('is-active');
 
+var detailToggle = $('section.detail .toggle').eq(0);
+var detailContent = $('section.detail .content').eq(0);
 
+detailToggle.addClass('is-active');
+detailContent.addClass('is-active');
 
 
 //Browser-level image lazy-loading
@@ -63,7 +68,7 @@ window.addEventListener('scroll', function () {
 
 /* Register service worker */
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./sw.js')
+  navigator.serviceWorker.register('/static/js/sw.js')
     .then(() => navigator.serviceWorker.ready.then((worker) => {
       worker.sync.register('syncdata');
     }))
@@ -102,6 +107,7 @@ $('form.exercise__item .btn input[type="file"]').on('change', function () {
   }
 })
 
+
 $('.mobileMenu-nav__ul > li > .dropdown').on('click', function () {
   $(this).parents('.mobileMenu-nav__ul > li').toggleClass('is-active');
   $(this).toggleClass('is-active');
@@ -109,30 +115,32 @@ $('.mobileMenu-nav__ul > li > .dropdown').on('click', function () {
 
 //dark mode check and set
 
-var dark = localStorage.getItem("darkmode");
-
-if (dark == "enabled") {
-  $("body").addClass("dark");
-  $(".header-darkMode").addClass('enabled');
-} else {
-  $("body").removeClass("dark");
-  $(".header-darkMode").removeClass('enabled');
-}
-
 $(".header-darkMode").click(function () {
   if ($(this).hasClass("enabled")) {
-    localStorage.clear();
+    Cookies.remove('darkmode');
     $(this).removeClass("enabled");
-    localStorage.setItem("darkmode", "disabled");
-    $("body").removeClass("dark");
+    Cookies.set("darkmode","disabled", { expires: 365 });
+    $("html").removeClass("dark");
   } else {
-    localStorage.clear();
     $(this).addClass("enabled");
-    $("body").addClass("dark");
-    localStorage.setItem("darkmode", "enabled");
+    $("html").addClass("dark");
+    Cookies.set("darkmode","enabled", { expires: 365 });
   }
 });
 
 $('.status__popupClose, .status__popupConfirm').on('click', function(){
   $(this).parents('.status__popup').removeClass('is-active');
+});
+
+$(".results__search input").on("input focus", function () {
+  if ($(this).val() == "") {
+    $(".results__table tbody tr").show();
+  } else {
+    if ($(".results__table tbody tr td:contains(" + $(this).val() + ")")) {
+      $(".results__table tbody tr").hide();
+      $(".results__table tbody tr td:contains(" + $(this).val() + ")")
+        .parents(".results__table tbody tr")
+        .show();
+    }
+  }
 });

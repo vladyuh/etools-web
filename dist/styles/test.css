@@ -1,0 +1,145 @@
+/* colors */
+
+/* dimensions */
+
+/* media breakpoints */
+
+section.test {
+  padding: 64px 0;
+}
+
+section.test .container {
+  max-width: 1124px;
+}
+
+section.test .section-h2 {
+  font-weight: 600;
+}
+
+section .test__title {
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+section .test__start {
+  width: 134px;
+}
+
+section .test__start svg {
+  order: -1;
+  margin-right: 8px;
+  margin-left: 0px;
+}
+
+section .test__start.disabled {
+  pointer-events: none;
+  background: #041E49;
+}
+
+section .test__formAnswers {
+  width: 100%;
+}
+
+section .test__formItem,
+section .test__resultsMark {
+  padding: 24px;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: background 0.5s ease;
+  border: 1px solid #E1E3E1;
+}
+
+section .test__formQuestion,
+section .test__resultsMark .section-h3 {
+  font-size: 18px;
+  line-height: 24px;
+  color: #000;
+  font-weight: 600;
+  margin: 0;
+}
+
+section .test__resultsMark .section-h3 {
+  display: flex;
+}
+
+section .test__resultsMark .section-h3 span.name {
+  margin-right: auto;
+}
+
+section .test__formRadio {
+  margin: 16px 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+section .test__formRadio label {
+  color: #1f1f1f;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+section .test__formRadio label input {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  flex-shrink: 0;
+}
+
+section .test__formSubmit {
+  display: flex;
+  justify-content: flex-end;
+}
+
+section .test__formSubmit .btn svg {
+  order: -1;
+  margin-right: 8px;
+  margin-left: 0px;
+}
+
+section .test__formSubmit .hidden {
+  display: none;
+}
+
+section .test__badge {
+  display: flex;
+  justify-content: center;
+  background: none !important;
+  color: #1f1f1f;
+}
+
+section .test__badge.error {
+  border: 2px solid #EA4335;
+}
+
+section .test__badge.success {
+  border: 2px solid #34A853;
+}
+
+@media screen and (max-width: 535px) {
+  section .test__formSubmit {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  section .test__badge {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=maps/test.css.map */

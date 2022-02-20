@@ -8,12 +8,25 @@
     transform: translateX(-100%);
     width: 280px;
     background: $white;
-    transition: transform 0.3s ease;
+    transition: left 0.3s ease;
     overflow-y: auto;
     overflow-x: hidden;
     z-index: 1001;
     padding: 0 24px;
-    padding-bottom: 25px;
+    padding-bottom: 16px;
+
+    @media screen and (max-width: 480px) {
+        height: auto;
+        max-height: 100vh;
+        width: 100%;
+        top: auto;
+        transform: translateY(100%);
+        transition: top 0.3s ease;
+
+        &.opened {
+            transform: translateY(0);
+        }
+    }
 
     &.opened {
         transform: translateX(0);
@@ -27,6 +40,13 @@
         }
     }
 
+    .divider {
+        height: 1px;
+        display: block;
+        background: $borderGrey;
+        margin: 12px -24px;
+    }
+
     &-nav {
         flex-grow: 1;
 
@@ -36,6 +56,10 @@
 
         &__ul li {
             position: relative;
+
+            span {
+                margin-left: 10px;
+            }
 
             .dropdown {
                 position: absolute;

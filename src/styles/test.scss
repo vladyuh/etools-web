@@ -16,20 +16,21 @@ section {
 
     .test {
         &__title {
-            padding: 0 16px;
             margin-bottom: 25px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            flex-wrap: wrap;
 
         }
 
         &__start {
-            width: 130px;
-            margin-right: -16px;
+            width: 134px;
 
             svg {
-                margin-left: auto;
+                order: -1;
+                margin-right: 8px;
+                margin-left: 0px;
             }
 
             &.disabled {
@@ -47,7 +48,7 @@ section {
             padding: 24px;
             background: #fff;
             border-radius: 8px;
-            margin-bottom: 24px;
+            margin-bottom: 16px;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -63,6 +64,14 @@ section {
             color: $black;
             font-weight: 600;
             margin: 0;
+        }
+
+        &__resultsMark .section-h3 {
+            display: flex;
+        }
+
+        &__resultsMark .section-h3 span.name {
+            margin-right: auto;
         }
 
         &__formRadio {
@@ -96,6 +105,14 @@ section {
         &__formSubmit {
             display: flex;
             justify-content: flex-end;
+
+            .btn {
+                svg {
+                    order: -1;
+                    margin-right: 8px;
+                    margin-left: 0px;
+                }
+            }
 
             .hidden {
                 display: none;

@@ -1,0 +1,99 @@
+/* colors */
+
+/* dimensions */
+
+/* media breakpoints */
+
+section.exercise {
+  padding: 64px 0 40px;
+}
+
+section.exercise .container {
+  max-width: 1124px;
+}
+
+section.exercise .section-h2 {
+  font-weight: 600;
+}
+
+section .exercise__items {
+  margin-top: 25px;
+}
+
+section .exercise__item {
+  padding: 24px;
+  background: #fff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.5s ease;
+  width: 100%;
+  border: 1px solid #E1E3E1;
+  margin-bottom: 16px;
+}
+
+section .exercise__item .title {
+  font-size: 18px;
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+section .exercise__item .desc {
+  font-size: 14px;
+  color: #1f1f1f;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+section .exercise__item .mark {
+  margin: 0;
+}
+
+section .exercise__item .btns {
+  display: flex;
+  margin: 0 -5px;
+}
+
+section .exercise__item .btns .btn {
+  margin: 0 5px;
+  justify-content: center;
+}
+
+section .exercise__item .btns .btn svg {
+  margin-right: 8px;
+  margin-left: 0;
+  order: -1;
+}
+
+section .exercise__item .btns .btn-submit {
+  display: none;
+}
+
+@media screen and (max-width: 660px) {
+  section .exercise__item .btns {
+    flex-wrap: wrap;
+  }
+
+  section .exercise__item .btns .btn {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  section .exercise__item .btns {
+    flex-wrap: nowrap;
+  }
+
+  section .exercise__item .btns .btn {
+    flex-grow: 1;
+    text-indent: -9999px;
+  }
+
+  section .exercise__item .btns .btn svg {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+/*# sourceMappingURL=maps/exercise.css.map */

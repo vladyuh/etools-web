@@ -25,6 +25,7 @@ const requireDir = require("require-dir"),
                 "./src/styles/test.{scss,sass}",
             ],
             dist: "./dist/styles/",
+            build: "../etool-py/mysite/lections/static/styles/",
             watch: [
                 "./src/blocks/**/*.{scss,sass}",
                 "./src/styles/**/*.{scss,sass}"

@@ -10,6 +10,13 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.25s ease;
+  font-size: 18px;
+  line-height: 24px;
+
+  span {
+    font-size: 18px;
+    line-height: 24px;
+  }
 
   &.rect {
     border-radius: 8px;

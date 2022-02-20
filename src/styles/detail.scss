@@ -3,29 +3,35 @@
 section {
 
     &.detail {
+        overflow: visible;
+        margin-top: 64px;
+
         .container {
             max-width: 1124px;
         }
     }
 
+    &.detail.tabs {
+        margin-top: 0;
+    }
+
     &.detail {
-        margin-top: 64px;
+
 
         .section-h2 {
             margin-bottom: 25px;
             font-weight: 600;
-            padding: 0 16px;
         }
 
         .topics {
-            margin: 0 -12px;
+            margin: 0 -8px;
             margin-bottom: 40px;
             display: flex;
             flex-wrap: wrap;
 
             @media screen and (max-width: 960px) {
                 &__item {
-                    width: calc(50% - 24px);
+                    width: calc(50% - 16px);
                 }
             }
 
@@ -44,13 +50,14 @@ section {
                 padding: 24px;
                 background: $white;
                 border-radius: 8px;
-                width: calc(33.33% - 24px);
-                margin: 0 12px;
-                margin-bottom: 24px;
+                width: calc(33.33% - 16px);
+                margin: 0 8px;
+                margin-bottom: 16px;
                 display: flex;
                 flex-direction: column;
                 transition: background 0.5s ease;
                 border: 1px solid $borderGrey;
+                align-items: flex-start;
 
                 &:hover {
                     background: #E8F0FE;
@@ -59,36 +66,35 @@ section {
 
             &__title,
             &__link {
-                font-size: 16px;
-                line-height: 22px;
+                font-size: 18px;
+                line-height: 24px;
             }
 
             &__title {
                 color: $textPrimary;
                 font-weight: 600;
                 min-height: 48px;
+                margin-bottom: 16px;
             }
 
             &__link {
                 margin-top: auto;
-                padding-top: 16px;
                 font-weight: 600;
                 display: flex;
+                flex-direction: row-reverse;
                 justify-content: space-between;
                 align-items: center;
 
                 svg {
-                    margin-left: 10px;
+                    margin-left: 0px;
+                    margin-right: 8px;
+                    fill: $btn;
                 }
 
                 span {
-                    color: $link;
+                    color: $btn;
                     border-bottom: 1px solid transparent;
                     transition: all 0.25s ease;
-                }
-
-                span:hover {
-                    border-bottom: 1px solid $link;
                 }
             }
         }

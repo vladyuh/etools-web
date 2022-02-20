@@ -6,7 +6,10 @@ mixin mobileMenu()
         +close()
     .mobileMenu-nav
       ul.mobileMenu-nav__ul
-        li: a vladuks123.vv
+        li
+          a 
+            +icons('#ic_account', 24)
+            span vladuks123.vv
         li
           a(href="index.html") Разделы
           .dropdown: +icons('#ic_dropdown', 24)
@@ -23,7 +26,10 @@ mixin mobileMenu()
             li: a(href="section.html") Облачные технологии
     .mobileMenu-footer
       ul.mobileMenu-nav__ul
-        li: a(href="login.html") Выход
+        li
+          a(href="login.html")
+            +icons('#ic_logout', 24)
+            span Выход
 mixin mobileMenuReg()
   .mobileMenu
     .mobileMenu-header

@@ -1,9 +1,31 @@
 @import "../styles/helpers/variables";
 
-body {
+html {
   &.dark {
-    background: $darkBack;
-    color: $textLight;
+
+    section.login .loginForm .submit a {
+      color: $btnDark;
+    }
+
+    .btn-blue {
+      span {
+        color: #062e6f !important;
+      }
+
+      svg {
+        fill: #062e6f !important;
+      }
+
+      background: $btnDark !important;
+
+    }
+
+    &,
+    body {
+      background: $darkBack;
+      color: $textLight;
+    }
+
 
     .link {
       color: $btnDark;
@@ -18,8 +40,10 @@ body {
       border-color: $borderDark !important;
     }
 
-    .loginForm .fields input {
+    .loginForm .fields input,
+    .results__search input {
       background: none;
+      color: $textLight !important;
       border-color: $borderDark !important;
     }
 
@@ -30,6 +54,10 @@ body {
 
     .mobileMenu {
       background: $darkMobile;
+
+      .divider {
+        background: $borderDark;
+      }
 
       svg {
         fill: $textLight;
@@ -53,20 +81,34 @@ body {
       }
 
       &.sticky {
-        background-color: $darkHeader;
+        background-color: $darkMobile;
       }
+    }
+
+    .results__search svg {
+      fill: $textLight;
     }
 
     .tabs__toggles {
       background-color: $darkBack;
+      border-color: $borderDark !important;
 
       .toggle {
-        color: $textLight;
+        color: $textLight !important;
+
+        &.is-active {
+          background: none !important;
+          color: $textLight !important;
+
+          &::after {
+            border-color: $btnDark !important;
+          }
+        }
       }
     }
 
     .footer {
-      background: $darkHeader;
+      background: $darkMobile;
     }
 
     .section {
@@ -132,6 +174,51 @@ body {
     .edit-content table.no-borders tr img {
       mix-blend-mode: normal;
     }
+
+    .table {
+      border-color: $borderDark !important;
+    }
+
+    .table thead tr {
+      background: $darkMobile !important;
+    }
+
+    .table td {
+      color: $textLight !important;
+      border-color: $borderDark !important;
+    }
+
+    .results__table {
+      tr.body {
+        border-color: $borderDark !important;
+      }
+    }
+
+    .status__popup {
+      background: $darkHeader;
+
+      svg {
+        fill: $textLight;
+      }
+    }
+
+    .edit-content p {
+      color: $textLight;
+    }
+
+    .edit-content ul li::before {
+      background: $textLight;
+    }
+
+    .footer .footer-desc {
+      border-color: $borderDark !important;
+    }
+
+
+
+
+
+
 
   }
 

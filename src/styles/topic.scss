@@ -2,66 +2,28 @@
 
 section {
   &.tabs {
+    overflow: visible;
+
     .container {
       max-width: 1124px;
     }
   }
 
-  .tabs {
+  &.tabs {
+    .tabs {
 
-    &__toggles {
-      height: 81px;
-      padding: 10px 0;
-      display: flex;
-      align-items: center;
-      overflow-x: auto;
-      overflow-y: hidden;
-      background: $white;
-      border-bottom: 1px solid $borderGrey;
+      &__content {
 
-      .toggle {
-        cursor: pointer;
-        position: relative;
-        font-weight: 600;
-        padding: 0 16px;
-        height: 48px;
-        display: flex;
-        align-items: center;
-        flex-shrink: 0;
-        border-radius: 32px;
-        margin-right: 16px;
-        color: $textPrimary;
-        line-height: 44px;
-        font-size: 16px;
-        transition: all 0.25s ease;
+        .content {
 
-        &:hover {
-          background: $tabHover;
-        }
-
-        &.is-active {
-          background: $accentHover;
-          color: $btnDisabled;
-
-          &:hover {
-            background: $tabActiveHover;
+          &.is-active {
+            display: block !important;
           }
         }
       }
+
     }
-
-    &__content {
-      padding: 25px 0;
-      margin: 0 auto;
-
-      .content {
-        display: none;
-
-        &.is-active {
-          display: block;
-        }
-      }
-    }
-
   }
+
+
 }

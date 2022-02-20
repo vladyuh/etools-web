@@ -1,0 +1,18 @@
+/* colors */
+
+/* dimensions */
+
+/* media breakpoints */
+
+section.tabs {
+  overflow: visible;
+}
+
+section.tabs .container {
+  max-width: 1124px;
+}
+
+section.tabs .tabs__content .content.is-active {
+  display: block !important;
+}
+/*# sourceMappingURL=maps/topic.css.map */
